@@ -1,0 +1,80 @@
+\documentclass[letterpaper,10pt,titlepage]{article}
+
+\usepackage{graphicx}                                        
+\usepackage{amssymb}                                         
+\usepackage{amsmath}                                         
+\usepackage{amsthm}                                          
+
+\usepackage{alltt}                                           
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage{balance}
+\usepackage[TABBOTCAP, tight]{subfigure}
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+
+\usepackage{geometry}
+\geometry{textheight=8.5in, textwidth=6in}
+
+%random comment
+
+\newcommand{\cred}[1]{{\color{red}#1}}
+\newcommand{\cblue}[1]{{\color{blue}#1}}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+\def\name{Krisna Iranwan, Jiongcheng (Roger) Luo, Drew Hamm}
+
+%% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {capstone design, problem statement},
+  pdftitle = {Problem Statement},
+  pdfsubject = {Problem Statement},
+  pdfpagemode = UseNone
+}
+\lstset{language=csh}
+\lstset{
+	numbers=right, 
+	numberstyle=\tiny, 
+	breaklines=true,
+	numbersep=5pt,
+	xleftmargin=0in,
+	xrightmargin=.25in,
+	tabsize=1,
+	frame=single
+} 
+
+\title{\Large{Problem Statement}}
+\author{\name}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+A Head-up Guidance System (HGS) is a powerful tool that displays real-time flight data to the pilots during the flight environment. The system allows the pilot to know about the aircraft’s position without looking out of the window, typically indicates aircraft’s longitude, latitude and altitude. Currently, the system achieves this data from the aircraft’s installed sensors, which is aligned to the display. The alignment method demands a high expense during its installation process. Rockwell Collins looks forward to using a less-expense sensor that is able to mount onto the HGS that will reduce installation costs by aligning this sensor’s data in real-time. At this time, it is unclear whether this approach will perform to the standards set by the previous method of aligning the HGS during installation. This project works on a solution that aligns the output from the mounted sensor to the output of the installed sensor by a real-time algorithm, that aims to provide corrected flight data. 
+
+\end{abstract}
+
+\section*{Problem Definition}
+Rockwell Collins sees a need for aviation HGS to be more accurately aligned to the aircraft when used in flight environment. The current system had to use the built in aircraft sensors in order to achieve the data, which in some flight environments will create alignment errors since the sensors are located in non-optimal places. More accurate in flight data can be obtained by using more sophisticated aircraft sensors on the aviation system. However, it is not physically possible to attach the same built-in sensors in the cockpit and it will exponentially increase the cost of production by using the built-in sensors. As a result, Rockwell Collins aims to explore new ways to get a more accurate data alignment for the display. One of the way is by using a smaller sensor that can be attached to the cockpit, while still affordable for the production cost. The downside of this method is that the smaller sensor will produce less accurate data than most sophisticated aircraft sensors, which doesn’t completely solve the alignment problem. Our goal is to create an algorithm that will aided the alignment error between sensors and integrate the data from both sensors to create a more accurate alignment of the data. The outcome of this project is to proof that by using the smaller sensor and the algorithm, at given amount of motion in the system, a more accurate alignment data is calculated for the new position.
+
+\section*{Problem Solution}
+The desired solution is an algorithm that attempts to improve the accuracy of a particular sensor’s output data by using it in conjunction with the output data of a more accurate sensor that is located within close proximity. We will first look into the error that is derived from the specific sensor hardware. Next we will focus on the error that comes from processing the sensor information into the quaternion output. We will consider also the installation error. We will try to find the correlation of the acceleration between both sensor data. The problem being solved depends on the accurate position of one location in relation to an onboard sensor. Although the current solution is to carefully align the system during installation, our solution hopes to solve this problem on the fly while meeting the desired accuracy level of one milliradian. Our team hopes to show if it is possible that the inaccuracies of a sensor's output data can be mitigated by the output data of a more accurate sensor that is within close proximity. If we find that 
+
+\section*{Problem Matrices}
+This software program will be able to measure and calculate precise alignment data for an aircraft’s transitional position by the given amount of motion. Primarily, a functional program is fundamental for the entire process, that should be able to recognize and read two groups of data that output from both HUD and the aircraft’s IRUs (Inertial Reference Unit), this step can be tested based on if the data transmission behaves successfully from the IRUs to the program. For the algorithm, which is the core of the calculation, should be able to generate the aligning data within one milliradian by taking transitional inputs, and an ideal algorithm should run within the accepted range of time and complexity. We may use unit tests for each part of the algorithm to check whether the data are processed correctly, and we may also transform the data into statistical data for deep analysis. 
+
+
+\end{document}
