@@ -1,18 +1,21 @@
 LATEX	= latex -shell-escape
 DVIPS	= dvips
 PS2PDF = ps2pdf
-SRC	= 'problem-statement'	#name of input file
+SRC	:= $(shell egrep -l '^[^%]*\\begin\{document\}' *.tex)
+DVIF	= $(SRC:%.tex=%.dvi)
+PSF	= $(SRC:%.tex=%.ps)
+PDF	= $(SRC:%.tex=%.pdf)
 
 all: pdf
 
 dvi:
-	$(LATEX) ${SRC}.tex
+	$(LATEX) ${SRC}
 
 ps: dvi
-	$(DVIPS) problem-statement.dvi
+	$(DVIPS) ${DVIF}
 
 pdf: ps
-	$(PS2PDF) problem-statement.ps
+	$(PS2PDF) ${PSF}
 
 clean:
 	rm -f *.pdf *.ps *.dvi *.out *.log *.aux *.bbl *.blg *.pyg
