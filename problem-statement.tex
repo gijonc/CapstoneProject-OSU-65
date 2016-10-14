@@ -30,7 +30,7 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 
-\def\name{Krisna Iranwan, Jiongcheng (Roger) Luo, Drew Hamm}
+\def\name{Krisna Iranwan, Jiongcheng (Roger) Luo and Drew Hamm}
 
 %% The following metadata will show up in the PDF properties
 \hypersetup{
@@ -55,17 +55,27 @@
 } 
 
 
-\pretitle{\begin{center}\Huge\bfseries}
-\posttitle{\par\end{center}\vskip 0.5em}
 
 
-\title{\Large{Problem Statement}}
-\author{\name}
-\date{\today}
 
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Oregon State University \par}
+	\vspace{2cm}
+	{\huge\bfseries Head Worn Display Auto-alignment System\par}
+	\vspace{2cm}
+	{\Large\itshape \name\par}
+	\vfill
+	supervised by\par
+	Rockwell Collins, Inc
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
 
 
 \begin{abstract}
@@ -82,5 +92,18 @@ The desired solution is an algorithm that attempts to improve the accuracy of a 
 \section*{Problem Matrices}
 This software program will be able to measure and calculate precise alignment data for an aircraft’s transitional position by the given amount of motion. Primarily, a functional program is fundamental for the entire process, that should be able to recognize and read two groups of data that output from both HUD and the aircraft’s IRUs (Inertial Reference Unit), this step can be tested based on if the data transmission behaves successfully from the IRUs to the program. For the algorithm, which is the core of the calculation, should be able to generate the aligning data within one milliradian by taking transitional inputs, and an ideal algorithm should run within the accepted range of time and complexity. We may use unit tests for each part of the algorithm to check whether the data are processed correctly, and we may also transform the data into statistical data for deep analysis. 
 
+
+\newpage
+	\noindent\begin{tabular}{ll}
+	\\[2cm]
+	\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+	Client Signature& Date\\[8ex]% adds space between the two sets of signatures
+	\makebox[2.5in]{\hrulefill}\\
+	Developer\\[8ex]
+	\makebox[2.5in]{\hrulefill}\\
+	Developer\\[8ex]
+	\makebox[2.5in]{\hrulefill}\\
+	Developer\\[8ex]
+	\end{tabular}
 
 \end{document}
