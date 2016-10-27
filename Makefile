@@ -15,9 +15,9 @@ pdf: $(PDF)
 
 ps: $(PSF)
 
-$(TRG): %.dvi: %.tex $(SRC)
+$(TRG): %.dvi: %.tex *.bib $(SRC)
 	$(LATEX) $<
-	#$(BIBTEX) $(<:%.tex=%)		// use for references in .bib file s
+	$(BIBTEX) $(<:%.tex=%)		// use for references in .bib file s
 	$(LATEX) $<
 	$(LATEX) $<
 
