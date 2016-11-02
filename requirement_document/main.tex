@@ -1,0 +1,106 @@
+\documentclass[letterpaper,10pt,notitlepage]{article}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[subfigure]{tocloft} 
+\usepackage{subfigure} 
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+
+%% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {capstone design, requirement document},
+  pdftitle = {requirement document},
+  pdfsubject = {requirement document},
+  pdfpagemode = UseNone
+}
+\lstset{language=csh}
+\lstset{
+	numbers=right,
+	numberstyle=\tiny,
+	breaklines=true,
+	numbersep=5pt,
+	tabsize=1,
+	frame=single
+}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Oregon State University\par}
+	\vspace{2cm}
+	{\huge\bfseries Head Worn Display Auto-alignment System\par}
+	\vspace{1cm}
+	{\huge Requirement Document\par}
+	\vspace{2cm}
+	{\Large\itshape Senior Software Engineering Project (CS461)\par}
+	{\Large\itshape Fall 2016\par}
+	\vspace{1cm}
+	{\normalsize\itshape Authors:\par}
+	{\normalsize \name\par}
+	\vspace{1cm}
+	{\normalsize\itshape Supervised by:\par}
+	{\normalsize Rockwell Collins, Inc.\par}
+	\vspace{3cm}
+
+	\begin{abstract}
+	A Head-up Display (HUD), is a transparent display that presents all necessary data that pilots need in their flight environment. Currently, the HUD obtains data from an aircraft\textquotesingle s mounted device called inertial reference unit (IRU)\footnote{A type of inertial sensor provides data of an aircraft\textquotesingle s position (Latitude, longitude, baro-inertial altitude), speed and attitude angles \cite{iru}.}, this IRU outputs precise and aligned data to the HUD. However, the current alignment process requires specialized equipment and epoxy which is time consuming, costly, and interrupts production line progress for the original equipment manufacturer. In addition, the resulting HUD alignment, while precise, does not compensate for airframe droop\footnote{As the center of the aircraft is pushed up due to lift, the nose of the aircraft is pulled down by its weight. The result of these conflicting forces causes a bend in the aircraft\textquotesingle s frame. } during flight. Rockwell Collins looks forward to a new alignment methodology utilizing an inexpensive microelectromechanical systems (MEMS)\footnote{A device/system made of electro-mechanical sensors such as gyroscopes, accelerometers and compasses \cite{mems}.} IRU mounted onto the HUD to infer alignment data from the aircraft\textquotesingle s precisely mounted and aligned IRU. This project works on a solution that utilizes the data from both the inexpensive MEMS IRU and the aircraft mounted IRU to develop an algorithm, which aims to output precise and aligned data with reduced installation cost.
+\end{abstract}
+\end{titlepage}
+\tableofcontents
+
+\newpage
+\section*{Gantt Chart}
+\input{granttChart}
+
+% content included in content.tex file
+\newpage
+\input{content}
+
+
+\newpage
+\nocite{*}
+\bibliography{IEEEabrv, References}
+\bibliographystyle{IEEEtran}
+
+
+\newpage
+	\section*{Signatures}
+	\noindent\begin{tabular}{ll}
+	\\[1cm]
+	\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+	Client & Date\\[8ex]% adds space between the two sets of signatures
+	\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+	Author 1 & Date\\[8ex]% adds space between the two sets of signatures
+	\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+	Author 2 & Date\\[8ex]% adds space between the two sets of signatures
+	\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+	Author 3 & Date\\[8ex]% adds space between the two sets of signatures
+	\end{tabular}
+
+\end{document}
