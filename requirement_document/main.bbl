@@ -86,6 +86,13 @@ SFUPTOWNMAKER, ``I2c,'' SparkFun Electronics. [Online]. Available:
   Available: \url{https://www.sparkfun.com/products/13762}
 \BIBentrySTDinterwordspacing
 
+\bibitem{IEEE830}
+\BIBentryALTinterwordspacing
+``Ieee recommended practice for software requirements specification (ieee std
+  830-1998),'' IEEE Computer Society, 1998. [Online]. Available:
+  \url{https://docs.google.com/a/oregonstate.edu/viewer?a=v&pid=sites&srcid=b3JlZ29uc3RhdGUuZWR1fGNhcHN0b25lLXdyaXRpbmctY29tbXVuaWNhdGlvbnN8Z3g6MzhkN2Q0MjAxN2Y5OGYyYg}
+\BIBentrySTDinterwordspacing
+
 \bibitem{hgs}
 \BIBentryALTinterwordspacing
 C.~Rapids, ``Head-up guidance system (hgs) for midsize and light business
