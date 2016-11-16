@@ -1,0 +1,151 @@
+
+
+% ================================================================================================================================
+
+\subsection{Hardware selection of Microcontroller}
+\paragraph{Context}
+It is critical to choose the most appropriate microcontroller for this system since there are limitations from both hardware and software perspectives. A microcontroller plays an important role in the system, which it will have following functionalities in the system:
+
+\begin{itemize}
+	\item Process input from the IMUs and output to the computer/display
+	\item Process the alignment algorithm
+	\item Debugging and testing purpose\\
+\end{itemize}
+
+\paragraph{Options}
+We consider to use a board between \textit{Arduino Pro Mini}\cite{arduino}, \textit{Adafruit Pro Trinket}\cite{trinket} and \textit{InvenSense MPU-9250 CA-SDK Reference Board}\cite{MPU9250SDK}. Anyone of these board has its outstanding areas and lack, and we will choose one of them based on the following criteria.\\
+
+\paragraph{Criteria}
+\begin{enumerate}
+	\item \textbf{Support Language}, we expect to use a general programming language for the microcontroller since using familiar programming language will reduce our time on addition research and the save time on working on the algorithm itself.
+	\item \textbf{Clock Speed}, the alignment algorithm is required to within around 500 milliseconds time from taking the input from the IRUs to the output of aligned data, that require the board has a fast speed and running any processes.
+	\item \textbf{I2C Protocol}, this is necessary to have on the board since the MPU-9250 (our selected IMU) require I2C protocol to communicate.
+	\item \textbf{Connection with PC}, this is necessary to have on the board since we will use computer to any software program.
+	\item \textbf{Size}, size is less important since this system is for demonstration purpose.
+	\item \textbf{Cost}, this is relatively important but as long as the price is within the expected budget, that will be acceptable.\\
+\end{enumerate}
+
+\newpage
+\paragraph{Table of Detailed Comparison}
+\hfill \break
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Model}                                                         & \textit{\begin{tabular}[c]{@{}c@{}}Arduino\\ Pro Mini\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}Adafruit\\ Pro Trinket\end{tabular}}          & \textit{\begin{tabular}[c]{@{}c@{}}InvenseSense\\ MPU-9250 CA-SDK Reference Board\end{tabular}} \\ \hline
+\textbf{Core Chip}                                                     & ATmega328                                                           & ATmega328                                                                        & \begin{tabular}[c]{@{}c@{}}Texas\\ Instrument MSP430\end{tabular}                               \\ \hline
+\textbf{Support Language}                                              & C                                                                   & C                                                                                & C/C++                                                                                           \\ \hline
+\textbf{Clock Speed}                                                   & \begin{tabular}[c]{@{}c@{}}8MHz\\ (3.3V mode)\end{tabular}          & \begin{tabular}[c]{@{}c@{}}12MHz\\ (3V mode)\end{tabular}                        & \begin{tabular}[c]{@{}c@{}}16MHZ\\ (1.8V – 3.6V)\end{tabular}                                   \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}I2C\\ Protocol/Number\end{tabular}} & Yes/1                                                               & Yes/1                                                                            & Embedded Structure                                                                              \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Connection\\ with PC\end{tabular}}  & USB                                                                 & FTDI/USB                                                                         & USB/Bluetooth                                                                                   \\ \hline
+\textbf{Size}                                                          & 33mm X 18mm                                                         & 38mm X 18mm X 2mm                                                                & Unknown                                                                                         \\ \hline
+\textbf{Cost (U.S Dollar)}                                             & \$9.95                                                              & \$9.95                                                                           & \$440.00                                                                                        \\ \hline
+\textbf{Advantage}                                                     & \begin{tabular}[c]{@{}c@{}}Small\\ size\end{tabular}                & \begin{tabular}[c]{@{}c@{}}Faster\\ clock speed\end{tabular}                     & With embedded IMU                                                                               \\ \hline
+\textbf{Shortage}                                                      & \begin{tabular}[c]{@{}c@{}}Slower\\ Clock Speed\end{tabular}        & \begin{tabular}[c]{@{}c@{}}Lack\\ of resource of guidance/datasheet\end{tabular} & High cost                                                                                       \\ \hline
+\end{tabular}
+\end{center}
+
+
+\hfill \break
+\paragraph{Overall Discussion}
+By comparing these boards by the above criteria, \textit{Arduino Pro Mini} and \textit{Adafruit Pro Trinket} have similar performance and specification, they both have the advantages of small size and low cost. \textit{InvenseSense MPU-9250 CA-SDK Reference Board} is a special case, which it’s a board as well as the IRU itself since it has embedded on-board sensors. \textit{MPU-9250 CA-SDK is very powerful} for multi-sensor system, other than an embedded MPU-9250 (accelerometer, gyroscope and compass), it also has pressure sensor, UV sensor, humidity and temperature sensor, light and proximity sensor. However, high cost is a noticeable shortage of \textit{MPU-9250 CA-SDK}. In addition, and not all of its functionalities are necessary for this project.
+
+Now, we only look at \textit{Adafruit Pro Trinket} and \textit{Arduino Pro Mini}. Based on the comparison and the criteria, \textit{Adafruit Pro Trinket} will be more preferable. Because this module has a faster clock speed compares to the \textit{Arduino Pro Mini}, although it has a larger size but this doesn’t affect to its actual performance based on our project requirement, other than that, all other concerned criteria are same as the \textit{Arduino Pro Mini}.
+
+
+% ================================================================================================================================
+
+\subsection{Hardware selection of Represented MEMS IMU}
+\paragraph{Context}
+An Inertial Measurement Unit (IMU) is the most significant part of the hardware components of this system. An MEMS IMU will be used to measure the acceleration, velocity position of the aircraft and output data for alignment algorithm. Therefore, we are looking for a model of IMU that is highly accurate, well performed as well as with affordable expense for the demonstration of this project, following chart compare these three model with a list of comparison.\\
+
+\paragraph{Options}
+We are looking at three models that are considered to be the most likely options for representing MEMS IRU. \textit{9DoF Sensor Stick}\cite{sensorStick}, \textit{MPU-9250 IMU}\cite{mpu9250} and \textit{9DoF IMU}\cite{9dof} are three models of IMU. All these three IMUs are with 9 degrees of freedom/9 axis sensor, that indicates all of these IMUs contain MEMS sensors of accelerometer, gyroscope and magnetometer(compass), which is a basic requirement for choosing the IMU in this project. Following are some specific criteria that we look and compare for choosing the most proper MEMS IRU.\\
+
+\paragraph{Criteria}
+\begin{enumerate}
+	\item \textbf{Operating voltage range},  this is determines based on the model we use for the microcontroller, which an operable voltage range of an IMU should be less than the output voltage of its microcontroller.
+	\item \textbf{Support I2C protocol}, this is significant since I2C could be the only protocol for an IMU to communicate with the microcontroller.
+	\item \textbf{Accelerometer output resolution}, this will determine the accuracy of the acceleration data output.
+	\item \textbf{Gyroscope output resolution}, this will determine the accuracy of the angular velocity data output.
+	\item \textbf{Magnetometer output resolution}, this will determine the accuracy of the orientation data output.
+	\item \textbf{Cost}, this is relatively important but as long as the price is within the expected budget, that will be acceptable.\\
+\end{enumerate}
+
+\paragraph{Table of Detailed Comparison}
+\hfill \break
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Model}                                                                                       & \textit{\begin{tabular}[c]{@{}c@{}}9DoF\\ Sensor Stick\end{tabular}}                                            & \textit{\begin{tabular}[c]{@{}c@{}}MPU-9250\\ IMU\end{tabular}} & \textit{9DoF IMU}                 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}MEMS\\ Sensors\end{tabular}}                                      & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Accel.: ADXL345\\ Gyro: ITG-3200\\ Magn.: HMC5883L\end{tabular}} & MPU-9250                                                        & LSM9DS1                           \\ \hline
+\textbf{Operating Voltage Range}                                                                     & 2.1 – 3.6V                                                                                                      & 2.4 – 3.6V                                                      & 1.9 – 3.6V                        \\ \hline
+\textbf{Output Type}                                                                                 & Unknown                                                                                                         & 16 bits ADC                                                     & 16 bits ADC                       \\ \hline
+\textbf{Support I2C Protocol}                                                                        & ±2g, ±4g, ±8g, ±16g                                                                                             & ±2g, ±4g, ±8g, ±16g                                             & ±2g, ±4g, ±8g, ±16g               \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Gyroscope Output \\ Resolution\\ (Angular Velocity)\end{tabular}} & \begin{tabular}[c]{@{}c@{}}Full\\ scale = ±2000 degree/s\end{tabular}                                           & ±250, ±500, ±1000, ±2000 degree/s                               & ±250, ±500, ±1000, ±2000 degree/s \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Magnetometer Output \\ Resolution\\ (gauss)\end{tabular}}         & ±8 gausses                                                                                                      & ±48 gausses                                                     & ±4, ±8, ±12, ±16 gausses          \\ \hline
+\textbf{Size}                                                                                        & 22.22 X 18.48 mm                                                                                                & Unknown                                                         & 14.3 mm X 20.5 mm                 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Cost\\ (U.S. Dollar)\end{tabular}}                                & \$49.95                                                                                                         & \$14.95                                                         & \$24.95                           \\ \hline
+\textbf{Advantage}                                                                                   & Higher output resolution                                                                                        & Least expensive                                                 & Wide spectrum of sensor range     \\ \hline
+\textbf{Shortage}                                                                                    & High expense                                                                                                    & Weaker performance                                              & A little expensive                \\ \hline
+\end{tabular}
+\end{center}
+
+\hfill \break
+\paragraph{Overall Discussion}
+In overall, these three models have similar performance and specification of out resolution, however, \textit{9DoF Sensor Stick} will be the least preferred option since it has the highest expense and it lacks of resources of its datasheet the relevant guidance. By comparing between \textit{MPU-9250 IMU} and \textit{9DoF IMU}, they both have specific datasheet that can be found, and their prices are both within the acceptable range, so by looking at more specific detail of their hardware performance, \textit{9DoF IMU} has wider sensor range to choose for its output resolution, which is more functional than the \textit{MPU-9250 IMU}. Therefore, the \textit{9DoF IMU} model would be the first preference for selecting the represent MEMS IMU.
+
+
+
+% ================================================================================================================================
+
+\subsection{Hardware selection of Communication Protocol Type}
+\paragraph{Context}
+There are many different types of protocol for hardware component devices communicating with each other. We chose three different protocol types that are the most common types to use, as well as doable in our hardware system.\\
+
+\paragraph{Options}
+\textit{I2C (Inter-Integrated Circuit)}, \textit{SPI (Serial Peripheral Interface)} and \textit{UART (Universal Asynchronous Receiver/Transmitter)} are three possible communication protocol types for our project, each of them has its own advantages and lack. In regards to this project, we will consider the following criteria for choosing the most appropriate protocol type for our hardware devices communication \cite{protocol1}.\\
+
+\paragraph{Criteria}
+\begin{enumerate}
+	\item \textbf{High Transmission Speed}, this is one of the most critical criteria to be consider, since our hardware system requires multi-devices to process near synchronously, a fast communication speed between hardware devices is necessary.
+	\item \textbf{Transmission Distance}, this criterion is less important within this system since we consider all of the hardware devices will be implemented as a whole device, that means transmission distance of the protocol type won’t be a necessary criterion.
+	\item \textbf{Multi-Devices Support}, since we may use more than 1 IMU to work together in order to gathering more accurate data, the protocol we choose to use must support multi-devices communication.
+	\item \textbf{Number of wire needed to connect with microcontroller}, this criterion is less important but less number of wires between hardware device provides higher portability of the system, and it also reduces the difficulties on the hardware set-up process.\\
+\end{enumerate}
+
+\paragraph{Table of Detailed Comparison}
+\hfill \break
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Protocol\\ Type\end{tabular}}                             & \textit{I2C/IIC}                                                                           & \textit{SPI}                                                                               & \textit{UART}                                                                         \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Transmission Speed \\ (Standard Speed Mode)\end{tabular}} & \textgreater1 Mbit/s                                                                       & $\sim$10 Mbit/s                                                                            & 0.3 Kbit/s $\sim$ 1 M bit/s                                                           \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Transmission \\ Distance\end{tabular}}                    & \begin{tabular}[c]{@{}c@{}}Short (Within \\ integrated circuit \\ components)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Short (Within \\ integrated circuit \\ components)\end{tabular} & Long (wireless)                                                                       \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Multi-Devices\\ Support\end{tabular}}                     & Yes                                                                                        & Yes                                                                                        & Yes                                                                                   \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Number of \\ Wire Needed\end{tabular}}                    & 2                                                                                          & 3 + 1 for each signal line                                                                 & none                                                                                  \\ \hline
+\textbf{Advantage}                                                                           & Easy to implement                                                                          & Fast transmission speed                                                                    & \begin{tabular}[c]{@{}c@{}}can be implemented \\ in wireless environment\end{tabular} \\ \hline
+\textbf{Shortage}                                                                            & Slow transmission speed                                                                    & \begin{tabular}[c]{@{}c@{}}More number \\ of wires needed\end{tabular}                     & Hard to implement                                                                     \\ \hline
+\end{tabular}
+\end{center}
+
+\hfill \break
+\paragraph{Overall Discussion}
+By comparing the above criteria, we first may eliminate UART because it has the slowest transmission speed within these three types, so it’s not expected for using in our system. SPI has significant fast speed however since we will use multiple IMUs connecting together in the system, SPI doesn’t provide a good portability that it requires 1 more physical wire for each additional devices. Therefore, I2C is the most preferable option, it has relatively high transmission speed, and it’s easy to implemented for a complicated system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

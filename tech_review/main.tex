@@ -1,0 +1,113 @@
+\documentclass[letterpaper,10pt,onecolumn]{IEEEtran}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[subfigure]{tocloft} 
+\usepackage{subfigure} 
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{changepage}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%% The following metadata will show up in the PDF properties
+\def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+\def\doc{Technology Review}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  linkcolor  = black,
+  pdfauthor = {\name},
+  pdfkeywords = {capstone design, \doc},
+  pdftitle = {\doc},
+  pdfsubject = {\doc},
+  pdfpagemode = UseNone
+}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Oregon State University\par}
+	\vspace{2cm}
+	{\huge\bfseries Head-Up Display Alignment System\par}
+	\vspace{1cm}
+	{\Large\bfseries \doc\par}
+	\vspace{1cm}
+	{\Large\itshape Senior Software Engineering Project (CS461)\par}
+	{\Large\itshape Fall 2016\par}
+	\vspace{1cm}
+	{\normalsize\itshape Authors:\par}
+	{\normalsize \name\par}
+	\vspace{1cm}
+	\vspace{3cm}
+
+
+	% ============= Abstract =================
+	\begin{abstract}
+		TODO (K)
+	\end{abstract}
+\end{titlepage}
+\tableofcontents
+
+\newpage
+% ============= Intro =================
+\section{Introduction}
+There are nine different main technologies that will be used or involved in this project. These technologies contain using of both software and hardware. For instance, for hardware, we will compare and discuss about some possible hardware options for building the demonstration system; for software, we will compare and discuss different algorithms or approaches for resolving the problem. Each of us takes an authorship (responsibility) for three technologies:\\
+
+\textit{\textbf{Jiongcheng (Roger):}}
+\begin{itemize}
+	\item Hardware selection of Microcontroller
+	\item Hardware selection of Represented MEMS IMU
+	\item Hardware selection of Communication Protocol Type
+\end{itemize}
+
+\textit{\textbf{Krisna:}}
+\begin{itemize}
+	\item Hardware selection of Data display device
+	\item Algorithm to find HUD offset using statistical correlation
+	\item Programming Language
+\end{itemize}
+
+\textit{\textbf{Drew:}}
+\begin{itemize}
+	\item Represent IRU: Simulation techniques
+	\item Algorithm to convert raw MEMS IRU data output to Quaternion output
+	\item Algorithm to get offset using both sensor outputs\\\\
+\end{itemize}
+
+
+
+% ============= content is put in individule file =================
+\section{Technologies}
+	\input{roger}
+	\input{krisna}
+	\input{Drew}
+
+% ============= Conclusion =================
+\section{Conclusion}
+TODO(D)
+
+
+\newpage
+\nocite{*}
+\bibliography{IEEEabrv,References}
+\bibliographystyle{IEEEtran}
+
+
+\end{document}
