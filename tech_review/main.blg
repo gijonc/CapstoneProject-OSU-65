@@ -15,48 +15,51 @@ Database file #2: References.bib
 Warning--empty author in protocol1
 Warning--empty journal in protocol1
 Warning--empty year in protocol1
+Warning--empty author in stat
+Warning--empty journal in stat
+Warning--empty year in stat
 ** IEEEtran BST control entry "IEEEexample:BSTcontrol" detected.
 
 Done.
-You've used 8 entries,
+You've used 12 entries,
             4024 wiz_defined-function locations,
-            1206 strings with 15097 characters,
-and the built_in function-call counts, 2407 in all, are:
-= -- 161
-> -- 20
+            1220 strings with 15401 characters,
+and the built_in function-call counts, 3582 in all, are:
+= -- 243
+> -- 24
 < -- 3
-+ -- 14
++ -- 18
 - -- 4
-* -- 111
-:= -- 429
-add.period$ -- 14
-call.type$ -- 8
-change.case$ -- 12
+* -- 162
+:= -- 638
+add.period$ -- 22
+call.type$ -- 12
+change.case$ -- 16
 chr.to.int$ -- 15
-cite$ -- 11
-duplicate$ -- 217
-empty$ -- 244
+cite$ -- 18
+duplicate$ -- 328
+empty$ -- 374
 format.name$ -- 0
-if$ -- 489
+if$ -- 736
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 41
-newline$ -- 59
+int.to.str$ -- 11
+missing$ -- 63
+newline$ -- 79
 num.names$ -- 0
-pop$ -- 156
+pop$ -- 238
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 4
-skip$ -- 167
+skip$ -- 254
 stack$ -- 0
-substring$ -- 10
-swap$ -- 92
+substring$ -- 14
+swap$ -- 140
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 8
-warning$ -- 3
+type$ -- 12
+warning$ -- 6
 while$ -- 5
-width$ -- 8
-write$ -- 86
-(There were 3 warnings)
+width$ -- 13
+write$ -- 121
+(There were 6 warnings)
