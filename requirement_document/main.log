@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  16 NOV 2016 00:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 NOV 2016 00:35
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main
+**main.tex
 (./main.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
@@ -24,7 +25,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 ** ATTENTION: Single column mode is not typically used with IEEE publications.
 -- Using 8.5in x 11in (letter) paper.
--- Using DVI output.
+-- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen105
 -- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen106
@@ -156,10 +157,18 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count97
 ))
 \Gin@req@height=\dimen134
 \Gin@req@width=\dimen135
@@ -195,13 +204,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count97
+\inf@bad=\count98
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count98
-\leftroot@=\count99
+\uproot@=\count99
+\leftroot@=\count100
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count100
-\DOTSCASE@=\count101
+\classnum@=\count101
+\DOTSCASE@=\count102
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
@@ -210,15 +219,15 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen138
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count102
-\c@MaxMatrixCols=\count103
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
 \dotsspace@=\muskip10
-\c@parentequation=\count104
-\dspbrk@lvl=\count105
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
 \tag@help=\toks19
-\row@=\count106
-\column@=\count107
-\maxfields@=\count108
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
 \andhelp@=\toks20
 \eqnshift@=\dimen139
 \alignsep@=\dimen140
@@ -255,7 +264,7 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count109
+\c@float@type=\count110
 \float@exts=\toks29
 \float@box=\box30
 \@float@everytoks=\toks30
@@ -267,11 +276,8 @@ Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: dvips.def on input line 144.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
-))
+Package color Info: Driver file: pdftex.def on input line 144.
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -332,10 +338,10 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigbottomskip=\skip89
 \subfigcapmargin=\dimen147
 \subfiglabelskip=\skip90
-\c@subfigure=\count110
-\c@lofdepth=\count111
-\c@subtable=\count112
-\c@lotdepth=\count113
+\c@subfigure=\count111
+\c@lofdepth=\count112
+\c@subtable=\count113
+\c@lotdepth=\count114
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -350,7 +356,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen148
 \enit@toks=\toks31
 \enit@inbox=\box32
-\enitdp@description=\count114
+\enitdp@description=\count115
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pstricks/pstricks.sty
 Package: pstricks 2015/11/14 v0.62 LaTeX wrapper for `PSTricks' (RN,HV)
@@ -361,9 +367,10 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -384,20 +391,20 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks32
 \XKV@tempa@toks=\toks33
 )
-\XKV@depth=\count115
+\XKV@depth=\count116
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks/pst-fp.tex
 `pst-fp' v0.05, 2010/01/17 (hv)
-\pstFP@xs=\count116
-\pstFP@xia=\count117
-\pstFP@xib=\count118
-\pstFP@xfa=\count119
-\pstFP@xfb=\count120
-\pstFP@rega=\count121
-\pstFP@regb=\count122
-\pstFP@regs=\count123
-\pstFP@times=\count124
+\pstFP@xs=\count117
+\pstFP@xia=\count118
+\pstFP@xib=\count119
+\pstFP@xfa=\count120
+\pstFP@xfb=\count121
+\pstFP@rega=\count122
+\pstFP@regb=\count123
+\pstFP@regs=\count124
+\pstFP@times=\count125
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
@@ -427,16 +434,16 @@ ode.tex
 \pgf@ya=\dimen156
 \pgf@yb=\dimen157
 \pgf@yc=\dimen158
-\c@pgf@counta=\count125
-\c@pgf@countb=\count126
-\c@pgf@countc=\count127
-\c@pgf@countd=\count128
-\pgfutil@tempcnta=\count129
-\pgfutil@tempcntb=\count130
+\c@pgf@counta=\count126
+\c@pgf@countb=\count127
+\c@pgf@countc=\count128
+\c@pgf@countd=\count129
+\pgfutil@tempcnta=\count130
+\pgfutil@tempcntb=\count131
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen159
-\pgfmath@count=\count131
+\pgfmath@count=\count132
 \pgfmath@box=\box33
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
@@ -461,14 +468,14 @@ code.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count132
+\c@pgfmathroundto@lastzeros=\count133
 ))
 \pgffor@iter=\dimen160
 \pgffor@skip=\dimen161
 \pgffor@stack=\toks41
 \pgffor@toks=\toks42
 )
-\psLoopIndex=\count133
+\psLoopIndex=\count134
 
 `PSTricks' v2.66  <2016/05/18> (tvz)
 \pst@dima=\dimen162
@@ -484,23 +491,23 @@ erarithmetics.code.tex)))
 \pst@hbox=\box34
 \pst@ibox=\box35
 \pst@boxg=\box36
-\pst@cnta=\count134
-\pst@cntb=\count135
-\pst@cntc=\count136
-\pst@cntd=\count137
-\pst@cntg=\count138
-\pst@cnth=\count139
-\pst@cntm=\count140
-\pst@cntn=\count141
-\pst@cnto=\count142
-\pst@cntp=\count143
-\@zero=\count144
+\pst@cnta=\count135
+\pst@cntb=\count136
+\pst@cntc=\count137
+\pst@cntd=\count138
+\pst@cntg=\count139
+\pst@cnth=\count140
+\pst@cntm=\count141
+\pst@cntn=\count142
+\pst@cnto=\count143
+\pst@cntp=\count144
+\@zero=\count145
 \pst@toks=\toks43
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks/pstricks.con)
 \psunit=\dimen172
 \psxunit=\dimen173
 \psyunit=\dimen174
-\pst@C@@rType=\count145
+\pst@C@@rType=\count146
 \pslinewidth=\dimen175
 \psk@startLW=\dimen176
 \psk@endLW=\dimen177
@@ -527,35 +534,35 @@ Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pst-node/pst-node.tex
  v1.36, 2016/04/24
-\psrow=\count146
-\pscol=\count147
-\psmatrixcnt=\count148
+\psrow=\count147
+\pscol=\count148
+\psmatrixcnt=\count149
 \psrowsep=\skip94
 \pscolsep=\skip95
-\pst@args=\count149
-\num@pts=\count150
-\pst@argcnt=\count151
+\pst@args=\count150
+\num@pts=\count151
+\pst@argcnt=\count152
 )
 File: pst-node.tex 2016/04/24 1.36 `pst-node' (tvz,hv)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count152
+\lst@mode=\count153
 \lst@gtempboxa=\box37
 \lst@token=\toks46
-\lst@length=\count153
+\lst@length=\count154
 \lst@currlwidth=\dimen187
-\lst@column=\count154
-\lst@pos=\count155
+\lst@column=\count155
+\lst@pos=\count156
 \lst@lostspace=\dimen188
 \lst@width=\dimen189
-\lst@newlines=\count156
-\lst@lineno=\count157
+\lst@newlines=\count157
+\lst@lineno=\count158
 \lst@maxwidth=\dimen190
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count158
-\lst@skipnumbers=\count159
+\c@lstnumber=\count159
+\lst@skipnumbers=\count160
 \lst@framebox=\box38
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
@@ -579,7 +586,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@old@col=\dimen195
 \TX@target=\dimen196
 \TX@delta=\dimen197
-\TX@cols=\count160
+\TX@cols=\count161
 \TX@ftn=\toks48
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
@@ -702,26 +709,25 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgf@yc=\dimen263
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count161
-\c@pgf@countb=\count162
-\c@pgf@countc=\count163
-\c@pgf@countd=\count164
+\c@pgf@counta=\count162
+\c@pgf@countb=\count163
+\c@pgf@countc=\count164
+\c@pgf@countd=\count165
 \t@pgf@toka=\toks50
 \t@pgf@tokb=\toks51
 \t@pgf@tokc=\toks52
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-dvips.def
+Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvips.de
-f
-File: pgfsys-dvips.def 2014/07/09  (rcs-revision 1.25)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-ostscript.def
-File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
-\pgf@objectcount=\count165
+df.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
@@ -972,8 +978,8 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
@@ -991,7 +997,7 @@ Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -1053,20 +1059,12 @@ LaTeX Info: Redefining \pageref on input line 6372.
 \c@Hfootnote=\count267
 )
 
-Package hyperref Message: Driver (default): hdvips.
+Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hdvips.def
-File: hdvips.def 2016/05/05 v6.83n Hyperref driver for dvips
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pdfmark.def
-File: pdfmark.def 2016/05/05 v6.83n Hyperref definitions for pdfmark specials
-\pdf@docset=\toks55
-\pdf@box=\box51
-\pdf@toks=\toks56
-\pdf@defaulttoks=\toks57
-\HyField@AnnotCount=\count268
-\Fld@listcount=\count269
-\c@bookmark@seq@number=\count270
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+\Fld@listcount=\count268
+\c@bookmark@seq@number=\count269
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1074,11 +1072,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip98
-))
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count271
-\cp@tempcnt=\count272
+\c@cp@cntr=\count270
+\cp@tempcnt=\count271
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 40.
 
@@ -1116,9 +1114,9 @@ LaTeX Font Info:    ... okay on input line 42.
 
 -- Lines per column: 57 (approximate, difference = 2.56499pt).
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1149,7 +1147,36 @@ LaTeX Font Info:    ... okay on input line 42.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count273
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count272
+\scratchdimen=\dimen304
+\scratchbox=\box51
+\nofMPsegments=\count273
+\nofMParguments=\count274
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count275
+\MPscratchDim=\dimen305
+\MPnumerator=\count276
+\makeMPintoPDFobject=\count277
+\everyMPtoPDFconversion=\toks56
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count278
+
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box52
 Package hyperref Info: Link coloring ON on input line 42.
@@ -1160,7 +1187,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count274
+\c@section@level=\count279
 )
 LaTeX Info: Redefining \ref on input line 42.
 LaTeX Info: Redefining \pageref on input line 42.
@@ -1172,7 +1199,20 @@ LaTeX Info: Redefining \nameref on input line 42.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
- [0] (./main.toc
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [0
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}] (./main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1187,219 +1227,378 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `main.toc'.
 
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
+(./granttChart.tex)
+Overfull \hbox (42.38466pt too wide) in paragraph at lines 47--70
+[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 47--70
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-(./roger.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
+[2] (./content.tex
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 41.
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+
+LaTeX Warning: Citation `hud' on page 3 undefined on input line 21.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 27.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+LaTeX Warning: Citation `conformal_atti' on page 3 undefined on input line 33.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
+
+LaTeX Warning: Citation `iru' on page 3 undefined on input line 44.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
+LaTeX Warning: Citation `mems' on page 3 undefined on input line 50.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-
- []
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ± in font ptmr7t!
-
-Overfull \hbox (7.4972pt too wide) in paragraph at lines 77--91
- [] 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+LaTeX Warning: Citation `accelerometer' on page 4 undefined on input line 56.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+LaTeX Warning: Citation `gyroscope' on page 4 undefined on input line 62.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+LaTeX Warning: Citation `i2c' on page 4 undefined on input line 68.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+LaTeX Warning: Citation `latAndLong' on page 4 undefined on input line 103.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+
+LaTeX Warning: Citation `latAndLong' on page 4 undefined on input line 109.
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+[4]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--144
+
+ []
+
+<diagram.png, id=193, 523.9575pt x 203.76125pt>
+File: diagram.png Graphic file (type png)
+ <use diagram.png>
+Package pdftex.def Info: diagram.png used on input line 149.
+(pdftex.def)             Requested size: 523.95622pt x 203.76074pt.
+
+Overfull \hbox (18.06622pt too wide) in paragraph at lines 149--150
+ [][] 
  []
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
+
+ []
+
+[5 <./diagram.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 122.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
-)
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 122.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-) (./krisna.tex) (./Drew.tex) [5] (./main.bbl
-Underfull \hbox (badness 2253) in paragraph at lines 38--42
-[]\OT1/ptm/m/n/8 ``Invensesense mpu-9250 ca-sdk ref-er-ence board user guide,''
- In-venSense Inc, 2012. [On-line]. Avail-able:
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
  []
+
+
+LaTeX Warning: Citation `trinket' on page 6 undefined on input line 222.
+
+
+LaTeX Warning: Citation `mpu9250' on page 6 undefined on input line 230.
 
 Missing character: There is no ¬ in font ptmr7t!
-Missing character: There is no ≤ in font ptmr7t!
-) [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ∞ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
+
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--309
+
+ []
+
+[7]) [8]
+No file main.bbl.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 113.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B7E23FBC3B03ED8C6357F12BD12E7EC7;1562.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
+(rerunfilecheck)             Checksum: EBBFC79890841E9530001327E5DC3555;2180.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 23445 strings out of 493015
- 436524 string characters out of 6133377
- 561658 words of memory out of 5000000
- 26555 multiletter control sequences out of 15000+600000
- 32689 words of font info for 80 fonts, out of 8000000 for 9000
+ 24230 strings out of 493014
+ 451604 string characters out of 6133351
+ 559547 words of memory out of 5000000
+ 27275 multiletter control sequences out of 15000+600000
+ 43864 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,12n,65p,808b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,7n,75p,946b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (10 pages, 128522 bytes).
+PDF statistics:
+ 252 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on main.dvi (7 pages, 60440 bytes).
