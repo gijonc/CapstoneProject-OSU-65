@@ -14,9 +14,9 @@ This last technique would require the precise input of motion that could be simu
 
 \subsubsection{Criteria}
 \begin{enumerate}
-	\item \textbf{Accuracy}, As the IRU is used as a reference point, the method to represent the IRU's data must maintain acceptable accuracy.
-	\item \textbf{Cost}, Cost is a driving consideration as the IRU is already too expensive. The chosen method should stay within our budget.
-	\item \textbf{Difficulty}, The chosen method should be one in which we are able to implement within the allotted timeframe. \\
+	\item \textbf{Accuracy}: As the IRU is used as a reference point, the method to represent the IRU's data must maintain acceptable accuracy.
+	\item \textbf{Cost}: Cost is a driving consideration as the IRU is already too expensive. The chosen method should stay within our budget.
+	\item \textbf{Difficulty}: The chosen method should be one in which we are able to implement within the allotted timeframe. \\
 \end{enumerate}
 
 \newpage
@@ -46,7 +46,7 @@ Although the accuracy is less than the other two methods, it can be improved wit
 % ================================================================================================================================
 
 % ================================================================================================================================
-\subsection{Convert Raw MEMS Output to Quaternion Output}
+\subsection{Filter technique}
 \subsubsection{Context}
 In order to find the alignment offset we need data that represents the HUD position in 3d space.
 We have chosen to use a quaternion output when calculating position as it provides the necessary information.
@@ -55,7 +55,7 @@ Individual sensor output will have some amount of error as specified by hardware
 By combining sensor data, performance issues can be reduced \cite{MOUSER}. \\
 
 \subsubsection{Options}
-Three options are presented to convert raw MEMS output to a quaternion output.
+Three options are presented to improve MEMS accuracy.
 The first option is to the Extended Kalman Filter (EKF).
 The next option is to use the Mahony Filter.
 Lastly, we could simply enable the quaternion output mode if supported by hardware such as Invensense’s Digital Motion Processor (DMP).\\
@@ -63,9 +63,9 @@ Lastly, we could simply enable the quaternion output mode if supported by hardwa
 
 \subsubsection{Criteria}
 \begin{enumerate}
-	\item \textbf{Accuracy}, When trying to find the correct alignment offset, accurate positional data is required.
-	\item \textbf{Complexity}, Given that our budget limits the available hardware we have access to, the chosen algorithm must be quick enough to run in realtime.
-	\item \textbf{Availability}, The choice must be available for use in our demonstration system. \\
+	\item \textbf{Accuracy}: When trying to find the correct alignment offset, accurate positional data is required.
+	\item \textbf{Complexity}: Given that our budget limits the available hardware we have access to, the chosen algorithm must be quick enough to run in realtime.
+	\item \textbf{Availability}: The choice must be available for use in our demonstration system. \\
 \end{enumerate}
 
 \newpage
@@ -95,4 +95,3 @@ At this time we are considering the MPU-9250 IMU which supports DMP.
 We will plan on using this feature unless a change of hardware is made.
 Higher performance equipment will enable us to use the EKF in place of the Mahony Filter. \\
 % ================================================================================================================================
-
