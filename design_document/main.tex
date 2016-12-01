@@ -1,0 +1,90 @@
+\documentclass[letterpaper,10pt,onecolumn]{IEEEtran}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{breakcites}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[subfigure]{tocloft} 
+\usepackage{subfigure} 
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{changepage}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%% The following metadata will show up in the PDF properties
+\def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+\def\doc{Design Document}
+\def\version{Version 1.0}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  linkcolor  = black,
+  pdfauthor = {\name},
+  pdfkeywords = {capstone design, \doc},
+  pdftitle = {\doc},
+  pdfsubject = {\doc},
+  pdfpagemode = UseNone
+}
+
+
+% define figure directory path 
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Oregon State University\par}
+	\vspace{2cm}
+	{\huge\bfseries Head-Up Display Alignment System\par}
+	\vspace{1cm}
+	{\Large\bfseries \doc\par}
+	\vspace{1cm}
+	{\large\itshape \version\par}
+	\vspace{1cm}
+	{\Large\itshape Senior Software Engineering Project (CS461)\par}
+	{\Large\itshape Fall 2016\par}
+	\vspace{1cm}
+	{\normalsize\itshape Authors:\par}
+	{\normalsize \name\par}
+	\vspace{1cm}
+	{\normalsize\itshape Supervised by:\par}
+	{\normalsize Rockwell Collins, Inc.\par}
+	\vspace{3cm}
+
+
+	% ============= Abstract =================
+	\begin{abstract}
+		A Head-up Display (HUD) Alignment system is developed as a proof of concept aims to explore a potential technological innovation for the HUD system that presents critical flight information to pilots. The primary objective of this project is to reduce the cost and time required to precisely align flight information to the HUD by introducing an additional sensor component to the system to make the alignment process more dynamic. This document is intended for use by Rockwell Collins and their HUD system development team. This document provides and explains an overall system framework, design viewpoints and specific design description for each viewpoint within the system. 
+	\end{abstract}
+\end{titlepage}
+\tableofcontents
+
+\newpage
+\input{introduction}
+
+\input{definition}
+
+\input{content}
+
+\newpage
+\nocite{*}
+\bibliography{IEEEabrv,References}
+\bibliographystyle{IEEEtran}
+
+
+\end{document}

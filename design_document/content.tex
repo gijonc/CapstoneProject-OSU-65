@@ -1,0 +1,64 @@
+\section{Context View}
+	\subsection{Program Design}
+	This section is the black box view for the system. This section covers the high-level, overall design description for this project including design concern, design elements, and HUD alignment system workflow are presented in this section. 
+
+		\subsubsection{Design Concern}
+		The primary goal of this project will be to use sensor data to find the initial alignment offset after HUD installation. The alignment offset must be found within the same accuracy of the previous installation standards and will be used within the system as a hard coded value. The secondary goal will be to use this additional sensor to find the alignment offset during flight to be used within the system as a dynamic value. The dynamic alignment offset must also be found within the desired accuracy standards. The outcome of this project is to create an algorithm that will produced the correct alignment data for the HUD alignment system. The aligned-data will compensate the alignment error correctly, and the alignment error should be within a range of one milliradian. 
+
+		\subsubsection{Design Elements}
+		\textbf{Stakeholders:} Rockwell Collins HUD system engineers. This program is a proof of concepts that intended to be applied to the future HUD system. This program will be used by Rockwell Collins to determine the availability of having an additional MEMS IRU in the new HUD alignment system. 
+
+		\textbf{Design relationships:} Users will be able to interact with the program via simulation or physical demonstration system. The users will be able to move and interact with the physical demonstration system to simulate the airframe droop and misalignment in the system. 
+
+		\textbf{Design constraints:} This project is limited to its hardware, signal handshake protocol, and higher order language requirements:\\
+		\begin{itemize}
+			\item This IMU model will be \textit{MPU-9250} MEMS sensors. 
+			\item The \textit{MPU-9250} is programmable and it outputs 8,000 samples per second, down to 3.9 samples per second.
+			\item The microcontroller model will used as the \textit{Metro Mini 328} to set up the sensors
+			\item The model ATmega328P as the core chip in \textit{Metro Mini 328}.
+			\item C/C++ programming language is used for the development of the software based on the selected microcontroller.
+		\end{itemize}
+
+\section{Composition View}
+	\subsection{Hardware Configuration Design}
+	This section will cover the specific design plan for assembling all hardware compositions of the system. This section is intended to summarize and explain all the necessary hardware components involved in the system design and their specification.
+
+		\subsubsection{Design Concerns}
+		One of the concerns in developing this demonstration system is to use inexpensive MEMS IMU instead of using the one from the original equipment manufacturer, which is costly. Hence, we chose to use the \textit{Metro Mini 328} as the microcontroller that has a fair price in the market currently. \textit{Metro Mini 328} provides an option that allows to use a 3.3V mode power supply. And since 3.3V is the standard operating power supply our selected IMU sensors model, \textit{MPU-9250}, \textit{Metro Mini 328} make it easy to connect with \textit{MPU-9250} without any external circuit or additional resistors.
+
+		\subsubsection{Design Elements}
+			\begin{itemize}
+				\item Simulated aircraft object: a remote controlled vehicle/drone
+				\item HUD IMU: one or more \textit{MPU-9250}s
+				\item Aircraft IMU: one or more \textit{MPU-9250}s
+				\item Microcontroller: one \textit{Metro Mini 328}
+				\item Output Display: Graphical output by a computer software (for demonstration system only)
+			\end{itemize}
+
+			\paragraph{Design Relationships}
+			Initially, all the hardware components will be mounted onto the simulated aircraft object. While the object is in a motion that could be a moving action by a remote vehicle, a flying action of a drone or simply a hand-made motion by manually adjusting, the IMU sensors (both HUD and aircraft IMUs) are simultaneously updating these motion data such as acceleration, angular velocity and orientation of the moving object and sending data to the connected microcontroller that is the \textit{Metro Mini 328} though the I2C protocols. Here, the input from both IMUs to the microcontroller are raw data, and these two groups of data will be the input for the alignment algorithm. See figure 2 in section Component Diagram for more detail about the component relationship.
+
+			\paragraph{Function Attribute}
+			The entire system is constructed based on four major entities including a simulated aircraft object, a microcontroller, a HUD IMU and an aircraft IMU. In addition, an output display is necessary in this demonstration system for testing purpose but it is not part of the original system, that means this display is used for simulating the real HUD output on an aircraft. Respectively, these two IMUs in this demonstration system represent and simulate the functionalities for the real IMU component mounted on a head-up display of an aircraft and the aircraft body itself. Within this demonstration system, both IMUs may consist of one or more \textit{MPU-9250} (e.g., accelerometers). The simulated aircraft object provides motion input to the IMU sensors this object can be any kinds of vehicle or drone that is able to provide physical motion.
+
+		\subsubsection{Component Diagram}
+		...
+
+
+
+\section{Dependency View}
+...
+
+\section{Interface View}
+...
+
+\section{Interaction View}
+...
+
+\section{Algorithm View}
+...
+
+
+
+
+
