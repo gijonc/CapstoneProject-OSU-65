@@ -2,5 +2,3 @@
 
 Note: main file is in <a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/design_document/main.pdf">main.pdf</a>
 
-Last Edit: Dec. 2, 2016
-
