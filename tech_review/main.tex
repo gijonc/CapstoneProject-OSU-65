@@ -28,6 +28,8 @@
 %% The following metadata will show up in the PDF properties
 \def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
 \def\doc{Technology Review}
+\def\version{Version 1.0}
+
 \hypersetup{
   colorlinks = true,
   urlcolor = black,
@@ -39,22 +41,28 @@
   pdfpagemode = UseNone
 }
 
+
+% define figure directory path 
+\graphicspath {{figures/}}
 \begin{document}
 
 \begin{titlepage}
 	\centering
-	{\scshape\LARGE Oregon State University\par}
-	\vspace{2cm}
-	{\huge\bfseries Head-Up Display Alignment System\par}
-	\vspace{1cm}
-	{\Large\bfseries \doc\par}
-	\vspace{1cm}
-	{\Large\itshape Senior Software Engineering Project (CS461)\par}
+	\begin{figure}
+		\centering
+	      	\includegraphics[scale=0.3]{osu_logo}
+	\end{figure}
+	{\Large\itshape Computer Science Senior Software Engineering Project (CS461)\par}
 	{\Large\itshape Fall 2016\par}
 	\vspace{1cm}
-	{\normalsize\itshape Authors:\par}
-	{\normalsize \name\par}
+	{\huge\bfseries Head-Up Display Alignment System\par}
+	\vspace{5mm}
+	{\huge\bfseries \doc\par}
+	\vspace{5mm}
+	{\large\itshape \version\par}
 	\vspace{1cm}
+	{\large\itshape Authors:\par}
+	{\large \name\par}
 	\vspace{3cm}
 
 

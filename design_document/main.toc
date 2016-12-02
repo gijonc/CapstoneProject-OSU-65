@@ -1,0 +1,60 @@
+\contentsline {section}{\numberline {I}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-A}}Purpose}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-B}}Purpose}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-C}}Overview}{3}{subsection.1.3}
+\contentsline {section}{\numberline {II}Definitions}{3}{section.2}
+\contentsline {section}{\numberline {III}Context View}{5}{section.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Program Design}{5}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-A}1}Design Concern}{5}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-A}2}\textbf {Design Elements}}{5}{subsubsection.3.1.2}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {III-A}2a}Stakeholders}{5}{paragraph.3.1.2.1}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {III-A}2b}Design relationships}{5}{paragraph.3.1.2.2}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {III-A}2c}Design constraints}{5}{paragraph.3.1.2.3}
+\contentsline {section}{\numberline {IV}Composition View}{5}{section.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Hardware Configuration Design}{5}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}1}Design Concerns}{5}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}2}Design Elements}{5}{subsubsection.4.1.2}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {IV-A}2a}Design Relationships}{5}{paragraph.4.1.2.1}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {IV-A}2b}Function Attribute}{6}{paragraph.4.1.2.2}
+\contentsline {section}{\numberline {V}Dependency View}{6}{section.5}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Dependency Design}{6}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}1}Design Concern}{6}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}2}Design Elements}{6}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}3}Dependency Attributes}{6}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}4}Design Rationale}{6}{subsubsection.5.1.4}
+\contentsline {section}{\numberline {VI}Interface View}{8}{section.6}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Software User Interface Design}{8}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}1}Design Concerns}{8}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}2}Design Elements}{8}{subsubsection.6.1.2}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VI-A}2a}Interface Attributes}{8}{paragraph.6.1.2.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}3}Design Rationale}{8}{subsubsection.6.1.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Physical User Interface Design}{9}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}1}Design Concern}{9}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}2}Design Elements}{9}{subsubsection.6.2.2}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VI-B}2a}Interface Attributes}{9}{paragraph.6.2.2.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}3}Design Rationale}{9}{subsubsection.6.2.3}
+\contentsline {section}{\numberline {VII}Interaction View}{9}{section.7}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-}1}Hardware Communication Design}{9}{subsubsection.7.0.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-}2}Design Concerns}{10}{subsubsection.7.0.2}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-}3}Design Elements}{10}{subsubsection.7.0.3}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VII-}3a}\textit {I2C} Protocol}{10}{paragraph.7.0.3.1}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VII-}3b}Universal Serial Bus}{10}{paragraph.7.0.3.2}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-}4}Design Constraints}{10}{subsubsection.7.0.4}
+\contentsline {section}{\numberline {VIII}Algorithm View}{11}{section.8}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}}Statistical Analysis Method for Initial Alignment Offset Design}{11}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}1}Design Concerns}{11}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}2}Design Elements}{11}{subsubsection.8.1.2}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VIII-A}2a}Processing Attributes}{11}{paragraph.8.1.2.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}3}Design Rationale}{11}{subsubsection.8.1.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}}Statistical Analysis Method For Dynamic Offset Design}{12}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}1}Design Concerns}{12}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}2}Design Elements}{12}{subsubsection.8.2.2}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VIII-B}2a}Processing Attributes}{12}{paragraph.8.2.2.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}3}Design Rationale}{12}{subsubsection.8.2.3}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}4}Offset Algorithm Design}{13}{subsubsection.8.2.4}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}5}Design Concerns}{13}{subsubsection.8.2.5}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}6}Design Elements}{13}{subsubsection.8.2.6}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VIII-B}6a}Processing Attributes}{13}{paragraph.8.2.6.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}7}Design Rationale}{13}{subsubsection.8.2.7}
+\contentsline {section}{References}{14}{section*.1}
+\contentsline {section}{\numberline {IX}Signatures}{15}{section.9}

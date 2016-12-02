@@ -44,33 +44,39 @@
 
 
 % define figure directory path 
+\graphicspath {{figures/}}
 \begin{document}
 
 \begin{titlepage}
 	\centering
-	{\scshape\LARGE Oregon State University\par}
-	\vspace{2cm}
-	{\huge\bfseries Head-Up Display Alignment System\par}
-	\vspace{1cm}
-	{\Large\bfseries \doc\par}
-	\vspace{1cm}
-	{\large\itshape \version\par}
-	\vspace{1cm}
-	{\Large\itshape Senior Software Engineering Project (CS461)\par}
+	\begin{figure}
+		\centering
+	      	\includegraphics[scale=0.3]{osu_logo}
+	\end{figure}
+	{\Large\itshape Computer Science Senior Software Engineering Project (CS461)\par}
 	{\Large\itshape Fall 2016\par}
 	\vspace{1cm}
-	{\normalsize\itshape Authors:\par}
-	{\normalsize \name\par}
+	{\huge\bfseries Head-Up Display Alignment System\par}
+	\vspace{5mm}
+	{\huge\bfseries \doc\par}
+	\vspace{5mm}
+	{\large\itshape \version\par}
 	\vspace{1cm}
-	{\normalsize\itshape Supervised by:\par}
-	{\normalsize Rockwell Collins, Inc.\par}
+	{\large\itshape Authors:\par}
+	{\large \name\par}
+	\vspace{1cm}
+	{\large\itshape Supervised by:\par}
+	{\large Rockwell Collins, Inc.\par}
 	\vspace{3cm}
 
 
 	% ============= Abstract =================
 	\begin{abstract}
-		A Head-up Display (HUD) Alignment system is developed as a proof of concept aims to explore a potential technological innovation for the HUD system that presents critical flight information to pilots. The primary objective of this project is to reduce the cost and time required to precisely align flight information to the HUD by introducing an additional sensor component to the system to make the alignment process more dynamic. This document is intended for use by Rockwell Collins and their HUD system development team. This document provides and explains an overall system framework, design viewpoints and specific design description for each viewpoint within the system. 
+		A Head-up Display (HUD) Alignment system is developed as a proof of concept aims to explore a potential technological innovation for the HUD system that presents critical flight information to pilots. The primary objective of this project is to reduce the cost and time required to precisely align flight information to the HUD by introducing an additional sensor component to the system to make the alignment process more dynamic. This document is intended for use by Rockwell Collins and their HUD system development team. This document provides and explains an overall system framework, design viewpoints and specific design description for each viewpoint within the system.
 	\end{abstract}
+	\vfill
+	{\normalsize \today\par}
+
 \end{titlepage}
 \tableofcontents
 
@@ -86,5 +92,18 @@
 \bibliography{IEEEabrv,References}
 \bibliographystyle{IEEEtran}
 
+\newpage
+\section{Signatures}
+\noindent\begin{tabular}{ll}
+\\[1cm]
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Client & Date\\[8ex]% adds space between the two sets of signatures
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Author 1 & Date\\[8ex]% adds space between the two sets of signatures
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Author 2 & Date\\[8ex]% adds space between the two sets of signatures
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Author 3 & Date\\[8ex]% adds space between the two sets of signatures
+\end{tabular}
 
 \end{document}

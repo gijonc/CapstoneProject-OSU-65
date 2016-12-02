@@ -27,15 +27,17 @@
 
 %% The following metadata will show up in the PDF properties
 \def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+\def\doc{Requirement Document}
+\def\version{Version 1.0}
 
 \hypersetup{
   colorlinks = true,
   urlcolor = black,
   linkcolor  = black,
   pdfauthor = {\name},
-  pdfkeywords = {capstone design, requirement document},
-  pdftitle = {requirement document},
-  pdfsubject = {requirement document},
+  pdfkeywords = {capstone design, \doc},
+  pdftitle = {\doc},
+  pdfsubject = {\doc},
   pdfpagemode = UseNone
 }
 
@@ -43,24 +45,28 @@
 
 \begin{titlepage}
 	\centering
-	{\scshape\LARGE Oregon State University\par}
-	\vspace{2cm}
-	{\huge\bfseries Head-Up Display Alignment System\par}
-	\vspace{1cm}
-	{\Large\bfseries Requirement Document\par}
-	\vspace{1cm}
-	{\Large\itshape Senior Software Engineering Project (CS461)\par}
+	\begin{figure}
+		\centering
+	      	\includegraphics[scale=0.3]{osu_logo}
+	\end{figure}
+	{\Large\itshape Computer Science Senior Software Engineering Project (CS461)\par}
 	{\Large\itshape Fall 2016\par}
 	\vspace{1cm}
-	{\normalsize\itshape Authors:\par}
-	{\normalsize \name\par}
+	{\huge\bfseries Head-Up Display Alignment System\par}
+	\vspace{5mm}
+	{\huge\bfseries \doc\par}
+	\vspace{5mm}
+	{\large\itshape \version\par}
 	\vspace{1cm}
-	{\normalsize\itshape Supervised by:\par}
-	{\normalsize Rockwell Collins, Inc.\par}
+	{\large\itshape Authors:\par}
+	{\large \name\par}
+	\vspace{1cm}
+	{\large\itshape Supervised by:\par}
+	{\large Rockwell Collins, Inc.\par}
 	\vspace{3cm}
 
 	\begin{abstract}
-	We are working with Rockwell Collins to explore potential technological innovations relating to their Head-Up Display (HUD) systems that present critical flight information to pilots. Our primary objective is to improve Rockwell Collins’ current HUD systems by reducing the cost and time required to precisely align flight information to the HUD. To meet our objective we will look into using a new alignment methodology in conjunction with the current HUD system as a proof of concept. The product being developed is a demonstration system that looks to include a MEMS IRU mounted onto the HUD and a new alignment algorithm that utilizes this additional sensor to determine accurate HUD alignment. This document will introduce the specific details of the demonstration system and describe the requirements for the development of the product.
+	We are working with Rockwell Collins to explore potential technological innovations relating to their Head-Up Display (HUD) systems that present critical flight information to pilots. Our primary objective is to improve Rockwell Collins current HUD systems by reducing the cost and time required to precisely align flight information to the HUD. To meet our objective we will look into using a new alignment methodology in conjunction with the current HUD system as a proof of concept. The product being developed is a demonstration system that looks to include a MEMS IRU mounted onto the HUD and a new alignment algorithm that utilizes this additional sensor to determine accurate HUD alignment. This document will introduce the specific details of the demonstration system and describe the requirements for the development of the product.
 	\end{abstract}
 \end{titlepage}
 \tableofcontents
