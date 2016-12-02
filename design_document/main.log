@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 DEC 2016 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 DEC 2016 09:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1199,7 +1199,7 @@ LaTeX Info: Redefining \nameref on input line 48.
 \openout4 = `main.out'.
 
 
-<figures/osu_logo.jpg, id=199, 365.365pt x 383.4325pt>
+<figures/osu_logo.jpg, id=203, 365.365pt x 383.4325pt>
 File: figures/osu_logo.jpg Graphic file (type jpg)
 
 <use figures/osu_logo.jpg>
@@ -1293,11 +1293,11 @@ Overfull \hbox (0.20975pt too wide) detected at line 58
 []\OT1/ptm/m/n/10 3 
  []
 
-)
+[1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [1] [2] (./introduction.tex
+ [2] (./introduction.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -1460,7 +1460,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[5] <figures/composition1.png, id=310, 764.8575pt x 205.76875pt>
+[5] <figures/composition1.png, id=315, 764.8575pt x 205.76875pt>
 File: figures/composition1.png Graphic file (type png)
 
 <use figures/composition1.png>
@@ -1489,7 +1489,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-<figures/dependency1.png, id=314, 267.8808pt x 402.303pt>
+<figures/dependency1.png, id=319, 267.8808pt x 402.303pt>
 File: figures/dependency1.png Graphic file (type png)
 
 <use figures/dependency1.png>
@@ -1509,7 +1509,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<figures/interface1.png, id=330, 373.395pt x 269.3262pt>
+<figures/interface1.png, id=335, 373.395pt x 269.3262pt>
 File: figures/interface1.png Graphic file (type png)
 
 <use figures/interface1.png>
@@ -1546,7 +1546,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-<figures/interface2.png, id=340, 363.2772pt x 232.2276pt>
+<figures/interface2.png, id=345, 363.2772pt x 232.2276pt>
 File: figures/interface2.png Graphic file (type png)
 
 <use figures/interface2.png>
@@ -1581,7 +1581,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-<figures/interaction1.png, id=351, 311.2428pt x 184.0476pt>
+<figures/interaction1.png, id=356, 311.2428pt x 184.0476pt>
 File: figures/interaction1.png Graphic file (type png)
 
 <use figures/interaction1.png>
@@ -1593,7 +1593,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--174
  []
 
 [10 <./figures/interaction1.png>]
-<figures/interaction2.png, id=364, 750.805pt x 313.17pt>
+<figures/interaction2.png, id=369, 750.805pt x 313.17pt>
 File: figures/interaction2.png Graphic file (type png)
 
 <use figures/interaction2.png>
@@ -1629,7 +1629,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<figures/algorithm1.png, id=372, 722.7pt x 542.025pt>
+<figures/algorithm1.png, id=377, 722.7pt x 542.025pt>
 File: figures/algorithm1.png Graphic file (type png)
 
 <use figures/algorithm1.png>
@@ -1668,22 +1668,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 109.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: F40FE3220F1955530A4E6F56807A5876;3374
-(rerunfilecheck)             After:  538399E52F475CB40DCD1C50C43D1B6C;3421.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 538399E52F475CB40DCD1C50C43D1B6C;3421.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 109.
  ) 
 Here is how much of TeX's memory you used:
- 24003 strings out of 493014
- 445361 string characters out of 6133351
+ 24004 strings out of 493014
+ 445373 string characters out of 6133351
  558556 words of memory out of 5000000
- 26967 multiletter control sequences out of 15000+600000
+ 26968 multiletter control sequences out of 15000+600000
  48008 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,7n,65p,1101b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1693,10 +1686,10 @@ live/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on main.pdf (16 pages, 841540 bytes).
+Output written on main.pdf (16 pages, 841618 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 424 compressed objects within 5 object streams
+ 471 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
  103 named destinations out of 1000 (max. 500000)
- 437 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 445 words of extra memory for PDF output out of 10000 (max. 10000000)
 
