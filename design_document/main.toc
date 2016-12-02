@@ -56,5 +56,6 @@
 \contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}2}Design Elements}{13}{subsubsection.8.3.2}
 \contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {VIII-C}2a}Processing Attributes}{13}{paragraph.8.3.2.1}
 \contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}3}Design Rationale}{13}{subsubsection.8.3.3}
+\contentsline {section}{\numberline {IX}Conclusion}{13}{section.9}
 \contentsline {section}{References}{14}{section*.1}
-\contentsline {section}{\numberline {IX}Signatures}{15}{section.9}
+\contentsline {section}{\numberline {X}Signatures}{15}{section.10}
