@@ -1,6 +1,3 @@
-<h4>Version 1.0</h4>
-
-1. main.tex hold the entire structure of the document
-2. Every member has individual content file (e.g., roger.tex)
-3. References are in References.bib file
-4. Makefile works
+<h3>
+Note: main file is in <a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/progress_report/main.pdf">main.pdf</a>
+</h3>
