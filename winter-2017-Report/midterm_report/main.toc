@@ -6,5 +6,11 @@
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}Problems and Solutions}{3}{subsection.2.4}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-E}}Interesting Code}{3}{subsection.2.5}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-F}}Experimental Design Description}{4}{subsection.2.6}
-\contentsline {section}{\numberline {III}krisna}{4}{section.3}
-\contentsline {section}{\numberline {IV}Drew}{4}{section.4}
+\contentsline {section}{\numberline {III}Krisna Irawan}{5}{section.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Purpose}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Current Stage}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Remaining Work}{6}{subsection.3.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Problems and Solutions}{7}{subsection.3.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-E}}Interesting Code}{7}{subsection.3.5}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-F}}First User Study}{8}{subsection.3.6}
+\contentsline {section}{\numberline {IV}Drew}{8}{section.4}
