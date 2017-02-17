@@ -4,7 +4,7 @@
 Our project is a proof of concept that intended to identify the feasibility of a new innovation technology for Rockwell Collins Head-Up Display (HUD) system. Rockwell Collins strive to improve their HUD installment process and accuracy. Currently, the instalment process of the HUD system is costly, time consuming and require specialized equipment and epoxy. This mechanical way of installing the HUD also created an in-flight accuracy problem caused by airframe droop. In this project we are evaluating the feasibility of having an additional MEMS IRU to reduce the instalment cost of the HUD and also eliminate the offset error caused by airframe droop. The end goal of this project is to create a demonstration system that utilize an additional MEMS IRU mounted onto the HUD to infer the alignment data from the aircrafts precisely mounted and aligned IRU. Our software system will produce an aligned data that compensate the alignment error correctly, and the alignment error should be within a range of one milliradian. We hope to find the alignment offset dynamically with this new methodology. By finding the alignment offset dynamically, Rockwell Collins can reduce the installment cost of their HUD and improve the accuracy of their HUD system during flight. 
 
 \subsection{Current Stage}
-I am in charge of the graphical user interface and the statistical analysis portion of the project. Currently, I am at the stage of connecting the graphical user interface that I created in Visual Studio to the offset algorithm part of the software created in Arduino by my teammates. At this stage, I make sure that the graphical user interface works smoothly by running a lot of user interface testing and configuration. I use a slider value in Visual Studio to make sure that the gauge works perfectly. I also put place holders for the alignment offset, original data, and offset data. I believe these place holders will reduce the time required for me when connecting the user interface and the offset algorithm in the future. The user interface runs smoothly with the visual studio environment. I am currently waiting for my teammates to make sure that their software portion in Arduino runs smoothly. I also have done research in connecting the Visual Studio graphical user interface with the Arduino environment. I am currently had a brief understanding with that process and probably will start to experiment with Arduino code next week. This week, I conducted a couple user study with my friends. Although the graphical user interface doesn’t look like a real HUD from Rockwell Collins, it still serves its purpose. See figure ~\ref{fig:hudsim} With a little explanation, my friends can grasp the concept and the meaning behind the HUD symbology in the user interface. I believe that at this stage the user interface is ready to go and I can move to the next implementation of the software. 
+I am in charge of the graphical user interface and the statistical analysis portion of the project. Currently, I am at the stage of connecting the graphical user interface that I created in Visual Studio to the offset algorithm part of the software created in Arduino by my teammates. At this stage, I make sure that the graphical user interface works smoothly by running a lot of user interface testing and configuration. I use a slider value in Visual Studio to make sure that the gauge works perfectly. I also put place holders for the alignment offset, original data, and offset data. I believe these place holders will reduce the time required for me when connecting the user interface and the offset algorithm in the future. The user interface runs smoothly with the visual studio environment. I am currently waiting for my teammates to make sure that their software portion in Arduino runs smoothly. I also have done research in connecting the Visual Studio graphical user interface with the Arduino environment. I am currently had a brief understanding with that process and probably will start to experiment with Arduino code next week. This week, I conducted a couple user study with my friends. Although the graphical user interface doesn’t look like a real HUD from Rockwell Collins, it still serves its purpose. See figure ~\ref{fig:hudsim} for a better picture. With a little explanation, my friends can grasp the concept and the meaning behind the HUD symbology in the user interface. I believe that at this stage the user interface is ready to go and I can move to the next implementation of the software. 
 
 \begin{figure}
     \caption{The HUD Simulator}
@@ -17,7 +17,6 @@ The next step for the user interface is to connect it to the Arduino part of the
 
 The next step on the implementation pipeline is the statistical analysis. I am in charged for the statistical analysis for both the pre-aligned data (the original data) and also the aligned data. I am still undecided on which IDE to write my code in. Currently, I am leaning towards to write my code in visual studio since I have been working with the Visual Studio IDE for the user interface. Last term I have done some research for statistical analysis method during the Tech Review. This term, I will start to do more research on the implementation side of the statistical analysis algorithm. The timeline for the statistical analysis portion of the software is tight. Hopefully I can finish the statistical analysis portion of the software on the next two weeks. 
 
-\newpage
 \subsection{Problems and Solutions}
 There was a logistical problem at the beginning of the term. Our team were not able to get the hardware required to get started with this project. This problem was frustrating for our team since our project rely heavily with the hardware. Without the hardware it is not possible to get started with the bone and the core of this project. Our hardware is the most important part of the demonstration system. The hardware is where our team get the alignment data as the original data and data to be manipulated with the software.\\
 
@@ -82,14 +81,16 @@ private void trackBar3_Scroll(object sender, EventArgs e)
 }
 \end{lstlisting}
 
-\subsection{First User Study}
-I conduct the user study with my friends. Although the graphical user interface doesn’t look like a real HUD from Rockwell Collins, it still serves its purpose. With a little explanation, my friends can grasp the concept and the meaning behind the HUD symbology in the user interface. I used gauge as the HUD symbology of the user interface. At first, it was slightly confusing since it is not a typical flight simulator HUD as figure ~\ref{fig:hudsimaction}. My friends told me that it looks more like a car dashboard. I will conduct the user study with our clients next week.  
-
 \begin{figure}
- 	\caption{The HUD Simulator in Action}
+    \caption{The HUD Simulator in Action}
     \includegraphics{img/hudsimaction}
     \label{fig:hudsimaction}
 \end{figure}
+
+\subsection{First User Study}
+I conduct the user study with my friends. Although the graphical user interface doesn’t look like a real HUD from Rockwell Collins, it still serves its purpose. With a little explanation, my friends can grasp the concept and the meaning behind the HUD symbology in the user interface. I used gauge as the HUD symbology of the user interface. At first, it was slightly confusing since it is not a typical flight simulator HUD, as figure ~\ref{fig:hudsimaction} described. My friends told me that it looks more like a car dashboard. I will conduct the user study with our clients next week.  
+
+
 
 
 
