@@ -1,3 +1,4 @@
+\newpage
 \section{Krisna Irawan}
 \subsection{Purpose}
 Our project is a proof of concept that intended to identify the feasibility of a new innovation technology for Rockwell Collins Head-Up Display (HUD) system. Rockwell Collins strive to improve their HUD installment process and accuracy. Currently, the instalment process of the HUD system is costly, time consuming and require specialized equipment and epoxy. This mechanical way of installing the HUD also created an in-flight accuracy problem caused by airframe droop. In this project we are evaluating the feasibility of having an additional MEMS IRU to reduce the instalment cost of the HUD and also eliminate the offset error caused by airframe droop. The end goal of this project is to create a demonstration system that utilize an additional MEMS IRU mounted onto the HUD to infer the alignment data from the aircrafts precisely mounted and aligned IRU. Our software system will produce an aligned data that compensate the alignment error correctly, and the alignment error should be within a range of one milliradian. We hope to find the alignment offset dynamically with this new methodology. By finding the alignment offset dynamically, Rockwell Collins can reduce the installment cost of their HUD and improve the accuracy of their HUD system during flight. 
@@ -25,53 +26,53 @@ Creating a HUD display is not an easy task. Rockwell Collins has put a lot of ti
 I use Visual Studio Toolkit to create the graphical user interface of the software. I wrote the code in C to make sure that it is compatible with Arduino. Because our team did not have the Arduino code ready, I decided to use the track bar as a method of debugging the graphical user interface. The track bar can be scrolled side by side to change the value of the gauge in the graphical user interface. To be able to use the gauge icon on the user interface, I imported a dll file called aGauge to my program. 
 
 \begin{lstlisting}[language=c]
-		public Form1()
-        {
-            InitializeComponent();
-            label9.Text = "0";
-            aGauge3.Value = 0;
-            label10.Text = "0";
-            aGauge2.Value = 0;
-            label8.Text = "0";
-            aGauge1.Value = 0;
-        }
+public Form1()
+{
+    InitializeComponent();
+    label9.Text = "0";
+    aGauge3.Value = 0;
+    label10.Text = "0";
+    aGauge2.Value = 0;
+    label8.Text = "0";
+    aGauge1.Value = 0;
+}
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            trackBar1.Minimum = -90;
-            trackBar1.Maximum = 90;
-            trackBar1.TickStyle = TickStyle.BottomRight;
-            trackBar1.TickFrequency = 1;
-            trackBar3.Minimum = 0;
-            trackBar3.Maximum = 360;
-            trackBar3.TickStyle = TickStyle.BottomRight;
-            trackBar3.TickFrequency = 1;
-            trackBar2.Minimum = -90;
-            trackBar2.Maximum = 90;
-            trackBar2.TickStyle = TickStyle.BottomRight;
-            trackBar2.TickFrequency = 1;
-        }
+private void Form1_Load(object sender, EventArgs e)
+{
+    trackBar1.Minimum = -90;
+    trackBar1.Maximum = 90;
+    trackBar1.TickStyle = TickStyle.BottomRight;
+    trackBar1.TickFrequency = 1;
+    trackBar3.Minimum = 0;
+    trackBar3.Maximum = 360;
+    trackBar3.TickStyle = TickStyle.BottomRight;
+    trackBar3.TickFrequency = 1;
+    trackBar2.Minimum = -90;
+    trackBar2.Maximum = 90;
+    trackBar2.TickStyle = TickStyle.BottomRight;
+    trackBar2.TickFrequency = 1;
+}
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            label9.Text = trackBar1.Value.ToString();
-            aGauge3.Value = trackBar1.Value;
-            aGauge3.Refresh();
-        }
+private void trackBar1_Scroll(object sender, EventArgs e)
+{
+    label9.Text = trackBar1.Value.ToString();
+    aGauge3.Value = trackBar1.Value;
+    aGauge3.Refresh();
+}
 
-        private void trackBar2_Scroll(object sender, EventArgs e)
-        {
-            label8.Text = trackBar2.Value.ToString();
-            aGauge1.Value = trackBar2.Value;
-            aGauge1.Refresh();
-        }
+private void trackBar2_Scroll(object sender, EventArgs e)
+{
+    label8.Text = trackBar2.Value.ToString();
+    aGauge1.Value = trackBar2.Value;
+    aGauge1.Refresh();
+}
 
-        private void trackBar3_Scroll(object sender, EventArgs e)
-        {
-            label10.Text = trackBar3.Value.ToString();
-            aGauge2.Value = trackBar3.Value;
-            aGauge2.Refresh();
-        }
+private void trackBar3_Scroll(object sender, EventArgs e)
+{
+    label10.Text = trackBar3.Value.ToString();
+    aGauge2.Value = trackBar3.Value;
+    aGauge2.Refresh();
+}
 \end{lstlisting}
 
 \subsection{First User Study}
