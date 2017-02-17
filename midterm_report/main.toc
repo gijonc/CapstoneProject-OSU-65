@@ -1,4 +1,4 @@
-\contentsline {section}{\numberline {I}Signatures}{2}{section.1}
+\contentsline {section}{\numberline {I}Signatures}{1}{section.1}
 \contentsline {section}{\numberline {II}Jiongcheng Luo (Roger)}{3}{section.2}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Purpose}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Current Stage}{3}{subsection.2.2}
