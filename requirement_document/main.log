@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 DEC 2016 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  17 FEB 2017 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1078,39 +1078,39 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count270
 \cp@tempcnt=\count271
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 42.
+Package hyperref Info: Option `colorlinks' set `true' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 42.
+(hyperref)                removing `\\' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 42.
+(hyperref)                removing `\\' on input line 45.
 
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 47.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 -- Lines per column: 57 (approximate, difference = 2.56499pt).
 *geometry* driver: auto-detecting
@@ -1179,7 +1179,7 @@ e
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring ON on input line 44.
+Package hyperref Info: Link coloring ON on input line 47.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1189,20 +1189,22 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count279
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
- <osu_logo.jpg, id=135, 365.365pt x 383.4325pt>
+ <osu_logo.jpg, id=139, 365.365pt x 383.4325pt>
 File: osu_logo.jpg Graphic file (type jpg)
 
 <use osu_logo.jpg>
-Package pdftex.def Info: osu_logo.jpg used on input line 50.
-(pdftex.def)             Requested size: 109.61034pt x 115.03062pt.
+Package pdftex.def Info: osu_logo.jpg used on input line 52.
+(pdftex.def)             Requested size: 91.34102pt x 95.85788pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 60.
  [0
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1215,7 +1217,7 @@ Non-PDF special ignored!
 Non-PDF special ignored!{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map} <./osu_logo.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 77.
  (./main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
@@ -1232,12 +1234,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1]
 (./granttChart.tex)
-Overfull \hbox (42.38466pt too wide) in paragraph at lines 47--76
+Overfull \hbox (42.38466pt too wide) in paragraph at lines 47--81
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--76
+Underfull \hbox (badness 10000) in paragraph at lines 47--81
 
  []
 
@@ -1252,10 +1254,6 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-
-LaTeX Warning: Citation `hud' on page 3 undefined on input line 21.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
@@ -1267,9 +1265,6 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
-
-
-LaTeX Warning: Citation `conformal_atti' on page 3 undefined on input line 33.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
@@ -1285,9 +1280,6 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-LaTeX Warning: Citation `iru' on page 3 undefined on input line 44.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
@@ -1296,24 +1288,14 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-LaTeX Warning: Citation `mems' on page 3 undefined on input line 50.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
 [3]
-
-LaTeX Warning: Citation `accelerometer' on page 4 undefined on input line 56.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
-
-
-LaTeX Warning: Citation `gyroscope' on page 4 undefined on input line 62.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 62--64
@@ -1338,9 +1320,6 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-
-LaTeX Warning: Citation `i2c' on page 4 undefined on input line 68.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
@@ -1372,15 +1351,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
  []
 
 
-LaTeX Warning: Citation `latAndLong' on page 4 undefined on input line 103.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
-
-
-LaTeX Warning: Citation `latAndLong' on page 4 undefined on input line 109.
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -1445,7 +1418,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--144
 
  []
 
-<diagram.png, id=194, 523.9575pt x 203.76125pt>
+<diagram.png, id=217, 523.9575pt x 203.76125pt>
 File: diagram.png Graphic file (type png)
  <use diagram.png>
 Package pdftex.def Info: diagram.png used on input line 149.
@@ -1482,12 +1455,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--197
 Underfull \hbox (badness 10000) in paragraph at lines 210--212
 
  []
-
-
-LaTeX Warning: Citation `trinket' on page 6 undefined on input line 222.
-
-
-LaTeX Warning: Citation `mpu9250' on page 6 undefined on input line 230.
 
 Missing character: There is no ¬ in font ptmr7t!
 Missing character: There is no ± in font ptmr7t!
@@ -1551,58 +1518,73 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--303
+Underfull \hbox (badness 10000) in paragraph at lines 303--305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--306
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 309--311
 
  []
 
-[7]) [8]
-No file main.bbl.
-[9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+[7]) [8] (./main.bbl
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+Underfull \hbox (badness 4634) in paragraph at lines 91--95
+[]\OT1/ptm/m/n/8 ``Ieee rec-om-mended prac-tice for soft-ware re-quire-ments sp
+ec-i-fi-ca-tion (ieee std 830-1998),'' IEEE
+ []
+
+
+Underfull \hbox (badness 7397) in paragraph at lines 91--95
+\OT1/ptm/m/n/8 Com-puter So-ci-ety, 1998. [On-line]. Avail-able: [][]$https : /
+ / docs . google . com / a / oregonstate . edu / viewer ? a = v & pid = sites &
+ srcid =
+ []
+
+) [9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EBBFC79890841E9530001327E5DC3555;2180.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+(rerunfilecheck)             Checksum: 2DF5BB870133DBA3ED7C0A63F6156760;2227.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 24237 strings out of 493014
- 451683 string characters out of 6133351
- 559584 words of memory out of 5000000
- 27280 multiletter control sequences out of 15000+600000
- 43276 words of font info for 80 fonts, out of 8000000 for 9000
+ 24294 strings out of 493014
+ 452327 string characters out of 6133351
+ 559989 words of memory out of 5000000
+ 27309 multiletter control sequences out of 15000+600000
+ 53135 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,7n,75p,946b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 159158 bytes).
+texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on main.pdf (11 pages, 172439 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 279 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

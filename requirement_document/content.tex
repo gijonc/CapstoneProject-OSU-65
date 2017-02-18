@@ -274,7 +274,7 @@ This program will have the capability to generate a confidence interval for each
 \\
 \subsubsection{Simulation}
 \paragraph{Simulated HUD}
-This program will have the capability to display the properly aligned symbology of the airplane. A generic HUD symbology picture which could be moved up/down, left/right will be used to illustrate the alignment of the airplane.
+This program will have the capability to display the properly aligned symbology of the airplane by using either external LCD display or graphic software (etc., OpenGL). A generic HUD symbology picture could be moved up/down, left/right will be used to illustrate the alignment of the airplane.
 
 
 %3.3
@@ -309,7 +309,7 @@ This product will be used internally by Rockwell Collins and since this product 
 This system does not work solely as a software neither a hardware product, which it has to be tested onto real flight situation. The current development  is for a proof of concepts. Hence, maintainability will not be an issue for this project. This project will be used as a reference and basis of a future project in Rockwell Collins, but not directly used as the core/underlying code for any long-term product.
 \\
 \subsubsection{Portability}
-Portability of this system exists on the hardware level. Since hardware programming is required for this project to manipulate functionalities of the hardware components (e.g., sensors, microprocessors/microcontrollers), specific hardware programming language for this project is host-dependent. It depends on the specific controller boards we are using. In this project, we are using C-like languages (C/C++), which is one of the proven portable language for hardware programming for most general microcontrollers/microprocessors, therefore this system has high portability.
+Portability of this system exists on the hardware level. Since hardware programming is required for this project to manipulate functionalities of the hardware components (e.g., sensors, microprocessors/microcontrollers), specific hardware programming language for this project is host-dependent. It depends on the specific controller boards we are using. In this project, we are using C for the programming language and Arduino IDE as the microcontroller programmer. C is one of the proven portable language for hardware programming for most general microcontrollers/microprocessors, as well as Arduino IDE is commonly used as the developemnt environment for programming AVR chip (Atmega328), therefore this system has high portability.
 
 
 
