@@ -162,9 +162,9 @@ This alignment algorithm is intended to be applied to the HUD system, which will
 	\item 
 	The SparkFun MPU-9250 IMU is programmable to output 8,000 samples per second, down to 3.9 samples per second,
 	\item 
-	The microcontroller model will used as the Pro Trinket chip to set up the sensors.   
+	The microcontroller model will used as the Metro Mini 328 chip to set up the sensors.   
 	\item 
-	The model ATmega328P as the core chip in Pro Trinket. 
+	The model ATmega328P as the core chip in Metro Mini 328. 
 	\item 
 	The algorithm will account for the target object’s position and rotation to ensure that the conformal attitude, flight path information and other displayed data is accurately aligned.
 	\item 
@@ -219,7 +219,7 @@ Our user interface will be the physical manipulation of our demonstration system
 	\item 
 	The hardwares are still not decided at this point. However, these are the product that we might use for the hardwares. 
 	\item 
-	Product Name: Adafruit Pro Trinket - 5V 16MHz \cite{trinket}
+	Product Name: Metro Mini 328 - 5V 16MHz \cite{trinket}
 	\item 
 	Features: 
 	\begin{itemize}
@@ -248,10 +248,10 @@ Our user interface will be the physical manipulation of our demonstration system
 
 
 \subsubsection{Software Interface}
-At this point we are still not sure what additional library/software we will use in this project. We will use C-like language (C/C++) to program this project. We will also use the ATmega328P library since we will use the ATmega328P chip as our microcontroller board.
+At this point we are still not sure what additional library/software we will use in this project. We will use C-like language (C/C++) to program this project on Arduino IDE. We will also use the ATmega328P library since we will use the ATmega328P chip as our microcontroller board.
 \\
 \subsubsection{Communication Interface}
-I2C protocol will be used to communicate with MPU-9250 and Pro Trinket. 
+I2C protocol will be used to communicate with MPU-9250 and Metro Mini 328. 
 
 
 %3.2
@@ -291,6 +291,8 @@ This program will have the capability to display the properly aligned symbology 
 %3.4
 \subsection{Design Constraints}
 This product is limited to the specification of the hardware. This product will get its input from MEMS IRU and aircraft IRU. The specification of the MEMS IRU and “aircraft” IRU will alter the quaternion manipulations being done to the data.  Different MEMS IRUs will require a different quaternion manipulations to achieve the expected standard of accuracy. This hardware dependability makes this product dependent to one specific hardware. Thus, limiting our design to one specific hardware.
+
+Another design constaint is to precisely get the hardware error from the IMU sensors, since the alignment algorithm requires high accuracy data input, minor error may cause unexpected offset of the final results. Therefore, we will need a feasible experiment to test and measure the sensor error precisely.
 
 %3.5
 \subsection{Software System Attributes}
