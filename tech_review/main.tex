@@ -26,9 +26,12 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 %% The following metadata will show up in the PDF properties
+\def\title{Computer Science Senior Software Engineering Project (CS462)}
 \def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
 \def\doc{Technology Review}
-\def\version{Version 1.0}
+\def\version{2.0}
+\def\term{Winter 2017}
+\def\project{Head-Up Display Alignment System}
 
 \hypersetup{
   colorlinks = true,
@@ -41,29 +44,31 @@
   pdfpagemode = UseNone
 }
 
-
-% define figure directory path 
-\graphicspath {{figures/}}
 \begin{document}
 
 \begin{titlepage}
-	\centering
+\centering
 	\begin{figure}
-		\centering
-	      	\includegraphics[scale=0.3]{osu_logo}
+	      	\includegraphics[scale=0.25]{osu_logo}
 	\end{figure}
-	{\Large\itshape Computer Science Senior Software Engineering Project (CS461)\par}
-	{\Large\itshape Fall 2016\par}
+	{\Large\itshape \title\par}
+	{\Large\itshape \term\par}
 	\vspace{1cm}
-	{\huge\bfseries Head-Up Display Alignment System\par}
-	\vspace{5mm}
-	{\huge\bfseries \doc\par}
-	\vspace{5mm}
-	{\large\itshape \version\par}
+	\scshape{
+		{\Huge \project\par}
+		\vspace{1cm}
+		{\Huge\bfseries\doc\par}
+		{\large Version: \version\par}
+	}
 	\vspace{1cm}
-	{\large\itshape Authors:\par}
+	{\large\itshape\bfseries Group 65:\par}
 	{\large \name\par}
-	\vspace{3cm}
+	\vspace{1cm}
+	{\large\itshape\bfseries Sponsor:\par}
+	{\large Rockwell Collins, Inc.\par}
+	\vspace{2cm}
+	{\large \today\par}
+	\vspace{4cm}
 
 
 	% ============= Abstract =================
