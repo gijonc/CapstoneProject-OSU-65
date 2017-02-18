@@ -26,9 +26,12 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 %% The following metadata will show up in the PDF properties
+\def\title{Computer Science Senior Software Engineering Project (CS462)}
 \def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
 \def\doc{Requirement Document}
-\def\version{Version 2.0}
+\def\version{2.0}
+\def\term{Winter 2017}
+\def\project{Head-Up Display Alignment System}
 
 \hypersetup{
   colorlinks = true,
@@ -44,26 +47,28 @@
 \begin{document}
 
 \begin{titlepage}
-	\centering
+\centering
 	\begin{figure}
-	      	\includegraphics[scale=0.25]{img/osulogo}
+	      	\includegraphics[scale=0.25]{osu_logo}
 	\end{figure}
-	{\Large\itshape Computer Science Senior Software Engineering Project (CS461)\par}
-	{\Large\itshape Fall 2016\par}
+	{\Large\itshape \title\par}
+	{\Large\itshape \term\par}
 	\vspace{1cm}
 	\scshape{
-		{\huge\doc\par}
-		{\large \today\par}
+		{\Huge \project\par}
 		\vspace{1cm}
-		{\Huge\bfseries Head-Up Display Alignment System\par}
+		{\Huge\bfseries\doc\par}
+		{\large Version: \version\par}
 	}
-	\vspace{2cm}
+	\vspace{1cm}
 	{\large\itshape\bfseries Group 65:\par}
 	{\large \name\par}
 	\vspace{1cm}
 	{\large\itshape\bfseries Sponsor:\par}
 	{\large Rockwell Collins, Inc.\par}
-	\vspace{5cm}
+	\vspace{2cm}
+	{\large \today\par}
+	\vspace{4cm}
 
 	\begin{abstract}
 	We are working with Rockwell Collins to explore potential technological innovations relating to their Head-Up Display (HUD) systems that present critical flight information to pilots. Our primary objective is to improve Rockwell Collins current HUD systems by reducing the cost and time required to precisely align flight information to the HUD. To meet our objective we will look into using a new alignment methodology in conjunction with the current HUD system as a proof of concept. The product being developed is a demonstration system that looks to include a MEMS IRU mounted onto the HUD and a new alignment algorithm that utilizes this additional sensor to determine accurate HUD alignment. This document will introduce the specific details of the demonstration system and describe the requirements for the development of the product.
