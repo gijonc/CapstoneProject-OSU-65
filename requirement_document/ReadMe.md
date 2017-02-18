@@ -1,3 +1,2 @@
-<h4>Requirement Document Version 1.0</h4>
+<h2><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/requirement_document/main.pdf">Requirement Document</a></h2>
 
-Last Edit: Dec. 1, 2016
