@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  17 FEB 2017 22:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  17 FEB 2017 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1203,8 +1203,10 @@ LaTeX Info: Redefining \nameref on input line 48.
 File: figures/osu_logo.jpg Graphic file (type jpg)
 
 <use figures/osu_logo.jpg>
-Package pdftex.def Info: figures/osu_logo.jpg used on input line 54.
-(pdftex.def)             Requested size: 109.61034pt x 115.03062pt.
+Package pdftex.def Info: figures/osu_logo.jpg used on input line 53.
+(pdftex.def)             Requested size: 91.34102pt x 95.85788pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 61.
  [0
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1410,7 +1412,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-<figures/breadboard.jpg, id=310, 4047.12pt x 3035.34pt>
+<figures/breadboard.jpg, id=311, 4047.12pt x 3035.34pt>
 File: figures/breadboard.jpg Graphic file (type jpg)
 
 <use figures/breadboard.jpg>
@@ -1665,11 +1667,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 109.
  ) 
 Here is how much of TeX's memory you used:
- 24028 strings out of 493014
- 445786 string characters out of 6133351
- 558727 words of memory out of 5000000
- 26983 multiletter control sequences out of 15000+600000
- 48008 words of font info for 94 fonts, out of 8000000 for 9000
+ 24037 strings out of 493014
+ 445878 string characters out of 6133351
+ 558719 words of memory out of 5000000
+ 26987 multiletter control sequences out of 15000+600000
+ 54260 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,8n,65p,1101b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1678,7 +1680,7 @@ live/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on main.pdf (18 pages, 5021829 bytes).
+Output written on main.pdf (18 pages, 5024206 bytes).
 PDF statistics:
  490 PDF objects out of 1000 (max. 8388607)
  443 compressed objects within 5 object streams

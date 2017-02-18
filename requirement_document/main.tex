@@ -28,7 +28,7 @@
 %% The following metadata will show up in the PDF properties
 \def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
 \def\doc{Requirement Document}
-\def\version{Version 1.0}
+\def\version{Version 2.0}
 
 \hypersetup{
   colorlinks = true,
@@ -46,24 +46,24 @@
 \begin{titlepage}
 	\centering
 	\begin{figure}
-		\centering
-	      	\includegraphics[scale=0.3]{osu_logo}
+	      	\includegraphics[scale=0.25]{img/osulogo}
 	\end{figure}
 	{\Large\itshape Computer Science Senior Software Engineering Project (CS461)\par}
 	{\Large\itshape Fall 2016\par}
 	\vspace{1cm}
-	{\huge\bfseries Head-Up Display Alignment System\par}
-	\vspace{5mm}
-	{\huge\bfseries \doc\par}
-	\vspace{5mm}
-	{\large\itshape \version\par}
-	\vspace{1cm}
-	{\large\itshape Authors:\par}
+	\scshape{
+		{\huge\doc\par}
+		{\large \today\par}
+		\vspace{1cm}
+		{\Huge\bfseries Head-Up Display Alignment System\par}
+	}
+	\vspace{2cm}
+	{\large\itshape\bfseries Group 65:\par}
 	{\large \name\par}
 	\vspace{1cm}
-	{\large\itshape Supervised by:\par}
+	{\large\itshape\bfseries Sponsor:\par}
 	{\large Rockwell Collins, Inc.\par}
-	\vspace{3cm}
+	\vspace{5cm}
 
 	\begin{abstract}
 	We are working with Rockwell Collins to explore potential technological innovations relating to their Head-Up Display (HUD) systems that present critical flight information to pilots. Our primary objective is to improve Rockwell Collins current HUD systems by reducing the cost and time required to precisely align flight information to the HUD. To meet our objective we will look into using a new alignment methodology in conjunction with the current HUD system as a proof of concept. The product being developed is a demonstration system that looks to include a MEMS IRU mounted onto the HUD and a new alignment algorithm that utilizes this additional sensor to determine accurate HUD alignment. This document will introduce the specific details of the demonstration system and describe the requirements for the development of the product.
