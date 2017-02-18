@@ -34,17 +34,48 @@
 		\subsubsection{Design Elements}
 			\begin{itemize}
 				\item Simulated aircraft object: a remote controlled vehicle/drone
-				\item HUD IMU: one or more \textit{MPU-9250}s
-				\item Aircraft IMU: one or more \textit{MPU-9250}s
+				\item HUD IMU: Three \textit{MPU-9250}s
+				\item Aircraft Three \textit{MPU-9250}s
 				\item Microcontroller: one \textit{Metro Mini 328}
-				\item Output Display: Graphical output by a computer software (for demonstration system only)\\
+				\item Output Display: Graphical output by LCD display/graphical software (for demonstration system only)\\
 			\end{itemize}
 
 			\paragraph{Design Relationships}
-			Initially, all the hardware components will be mounted onto the simulated aircraft object. While the object is in a motion that could be a moving action by a remote vehicle, a flying action of a drone or simply a hand-made motion by manually adjusting, the IMU sensors (both HUD and aircraft IMUs) are simultaneously updating these motion data such as acceleration, angular velocity and orientation of the moving object and sending data to the connected microcontroller that is the \textit{Metro Mini 328} though the \textit{I2C} protocols. Here, the input from both IMUs to the microcontroller are raw data, and these two groups of data will be the input for the alignment algorithm. Refer Figure~\ref{fig:composition1} in section \textbf{Component Diagram} for more detail about the relationship among all hardware components.\\
+			Initially, all the hardware components will be mounted onto a breadboard as figure ~\ref{fig:breadboard}. While the breadboard is in a motion that could be a moving action by a remote vehicle, a flying action of a drone or simply a hand-made motion by manually adjusting, the IMU sensors (both HUD and aircraft IMUs) are simultaneously updating these motion data such as acceleration, angular velocity and orientation of the moving object and sending data to the connected microcontroller that is the \textit{Metro Mini 328} though the \textit{I2C} protocols. Here, the input from both IMUs to the microcontroller are raw data, and these two groups of data will be the input for the alignment algorithm. Refer Figure~\ref{fig:composition1} in section \textbf{Component Diagram} for more detail about the relationship among all hardware components.\\
+
+			\begin{figure}
+				\centering
+			 		\caption{IMU \& Microcontroller Mounted onto a breadboard}
+			      	\includegraphics[width=0.5\textwidth ,height=0.5\textheight,keepaspectratio,angle=270,origin=c]{breadboard}
+			    \label{fig:breadboard}
+			\end{figure}
+
+
 
 			\paragraph{Function Attribute}
-			The entire system is constructed based on four major entities including a simulated aircraft object, a microcontroller, a HUD IMU and an aircraft IMU. In addition, an output display is necessary in this demonstration system for testing purpose but it is not part of the original system, that means this display is used for simulating the real HUD output on an aircraft. Respectively, these two IMUs in this demonstration system represent and simulate the functionalities for the real IMU component mounted on a head-up display of an aircraft and the aircraft body itself. Within this demonstration system, both IMUs may consist of one or more \textit{MPU-9250} (e.g., accelerometers). The simulated aircraft object provides motion input to the IMU sensors this object can be any kinds of vehicle or drone that is able to provide physical motion.
+			The entire system is constructed based on four major entities including a simulated aircraft object, a microcontroller, a HUD IMU and an aircraft IMU. In addition, an output display is necessary in this demonstration system for testing purpose but it is not part of the original system, that means this display is used for simulating the real HUD output on an aircraft. Respectively, these two IMUs in this demonstration system represent and simulate the functionalities for the real IMU component mounted on a head-up display of an aircraft and the aircraft body itself. Within this demonstration system, both IMUs may consist of one or more \textit{MPU-9250} (e.g., accelerometers). The simulated aircraft object provides motion input to the IMU sensors this object can be any kinds of vehicle or drone that is able to provide physical motion.\\
+
+
+			\paragraph{Experiment Design for IMU Error Measurement}
+			It is vital to know the actual error of all IMU sensors before using the data into the algorithm. A method to precisely measure the error is to compare a known inclined angle with the calculated angle from two sensor output results (before and after incline).
+
+			\begin{figure}
+				\centering
+			 		\caption{Mechanical Angle Adjuster}
+			      	\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{widget}
+			    \label{fig:widget}
+			\end{figure}
+
+			The experiment will be using a laser pointer and a mechanical angle adjuster as figure ~\ref{fig:widget} for assistant tool. A mechanical angle adjuster allows to be manually set for getting a certain degree of angle for simulating yaw, pitch and roll, that will be able to provide a stable motion for the IMU as well as error measurement. A laser pointer is also necessary, that a laser is for constructing a triangle by using the initial distance between the laser pointer and the wall (a), alternative distance between the laser pointer and wall, as well as the distance between two spotlight (b), refer figure~\ref{fig:draft}:
+
+			\begin{figure}
+				\centering
+			 		\caption{Draft graph of error measurement experiment}
+			      	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{draft}
+			    \label{fig:draft}
+			\end{figure}
+
+			Theta represents the angle between adjusting the angle, and by measuring the distance value of “a” and “b”, theta can be calculated by applying trigonometric function. Assume theta is the actual precise angle (in radian), the error of the IMU sensor can be measured by comparing the actual precise angle with the output data from the IMU.
 
 		\begin{figure}
 			\centering
