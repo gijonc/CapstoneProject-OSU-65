@@ -17,7 +17,7 @@ Rockwell Collins
  
 
  ### Software Environment
-python 2.7.9 (https://www.python.org/download/releases/2.7/)]
+[[python 2.7.9] (https://www.python.org/download/releases/2.7/)]
 
 
 
