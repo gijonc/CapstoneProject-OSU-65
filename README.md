@@ -17,12 +17,15 @@ Rockwell Collins
  
 
  ### Software Environment
-[[python 2.7.9] (https://www.python.org/download/releases/2.7/)]
+ python 2.7.9
+ vpython
+ pyserial
+ Arduino IDE
+ 
+ ###Running Instruction
 
 
-
-
-# Document Links
+## Documentation
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/progress_report/main.pdf">Progress Report</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/design_document/main.pdf">Design Document</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/tech_review/main.pdf">Technology Review</a></h4>
