@@ -1,10 +1,10 @@
 # OSU CS Senior Software Engineering Project - Group #65
 
 
-* Author:
-  Jiongcheng Luo
-  Drew Hamm
-  Krisna Iwrana
+## Author:
+  * Jiongcheng Luo
+  * Drew Hamm
+  * Krisna Iwrana
 
 
 
@@ -19,7 +19,7 @@
 
 
 
-#Document Links#
+# Document Links
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/progress_report/main.pdf">Progress Report</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/design_document/main.pdf">Design Document</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/tech_review/main.pdf">Technology Review</a></h4>
