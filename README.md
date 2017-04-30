@@ -1,7 +1,13 @@
 # OSU CS Senior Software Engineering Project - Group #65
 
+## Project
+Head-up Display Auto-alignment System
 
-## Author:
+## Project Sponsor
+Rockwell Collins
+
+
+## Group Members
   * Jiongcheng Luo
   * Drew Hamm
   * Krisna Iwrana
