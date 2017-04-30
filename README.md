@@ -1,6 +1,31 @@
-<h3>This repository includes all writen documents by OSU <b>Fall 2016 Capstone Project Group #65</b></h3>
+# OSU CS Senior Software Engineering Project - Group #65
 
-<h3>Shortcuts:</h3>
+## Project
+Head-up Display Auto-alignment System
+
+## Project Sponsor
+Rockwell Collins
+
+
+## Group Members
+  * Jiongcheng Luo
+  * Drew Hamm
+  * Krisna Iwrana
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Document Links
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/progress_report/main.pdf">Progress Report</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/design_document/main.pdf">Design Document</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/tech_review/main.pdf">Technology Review</a></h4>
