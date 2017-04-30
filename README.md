@@ -17,12 +17,12 @@ Rockwell Collins
  
 
  ### Software Environment
- python 2.7.9
- vpython
- pyserial
- Arduino IDE
+ * python 2.7.9
+ * vpython
+ * pyserial
+ * Arduino IDE
  
- ###Running Instruction
+ ### Running Instruction
 
 
 ## Documentation
