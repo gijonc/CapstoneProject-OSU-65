@@ -17,8 +17,8 @@ Rockwell Collins
  
 
  ### Software Environment
- * [![python](https://www.python.org/download/releases/2.7/)]()
-[![npm](https://img.shields.io/npm/v/gulp-tag-version.svg?maxAge=2592000&style=flat-square)]()
+[![python](https://www.python.org/download/releases/2.7/)]()
+
 
 
 # Document Links
