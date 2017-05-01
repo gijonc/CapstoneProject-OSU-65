@@ -17,7 +17,7 @@ Rockwell Collins
 The usage of this project requires specific hardware components and software environment.
 
  ### Hardware
- [*9 Degrees of Freedom - MPU-9250 Breakout (SEN-13762)*](https://www.sparkfun.com/products/13762)
+ * [*MPU-9250 Breakout*](https://www.sparkfun.com/products/13762)
  
 
  ### Software Environment
