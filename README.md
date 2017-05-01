@@ -1,6 +1,6 @@
 # OSU CS Senior Software Engineering Project - Group #65
 
-## Project
+## Project Detail
 ### Head-up Display Auto-alignment System
 There is a need for aviation head worn systems to be accurately aligned to the aircraft when used in flight environments. Rockwell Collins would like to create a demonstration system for an auto-aligning head worn display using cutting edge micro-electronics and real-time algorithms.
 
@@ -14,25 +14,23 @@ Rockwell Collins
   * Krisna Irawan
 
 ## Usage
-The usage/demonstration of this project requires specific hardware components and software environment. As long as 
+The usage/demonstration of this project requires specific hardware components and software environment, all following components are necessary.
 
  ### Hardware
  * [MPU-9250 Breakout](https://www.sparkfun.com/products/13762)
  * [Metro Mini 328](https://www.adafruit.com/product/2590)
  * [I2C Protocol Guide](http://www.byteparadigm.com/applications/introduction-to-i2c-and-spi-protocols/)
+ 
 
  ### Software Environment
- * [Python 2.7.9](https://www.python.org/downloads/release/python-279/)
- * [Arduino IDE](https://www.arduino.cc/en/Main/Software)
+The sourse code for [Metro Mini 328](https://www.adafruit.com/product/2590) is uploaded via [Arduino IDE](https://www.arduino.cc/en/Main/Software)(source code can be found [here](https://github.com/gijoncheng/CapstoneProject-OSU-65/tree/master/src/Auto_Alignment))
  
- ### Other Libraries:
- * [vpython](https://github.com/pyserial/pyserial)
- * [pyserial](https://github.com/pyserial/pyserial)
-
+ The graphical UI of the demonstration was written by [Python](https://www.python.org/downloads/release/python-279/), you will need to install [VPython](https://github.com/pyserial/pyserial)(a 3D graphics module for Python) and [pySerial](https://github.com/pyserial/pyserial) (A Python module encapsulates the access for the serial port) before compiling.
+ 
+ 
  
 
-
-### Project Documentations
+## Project Documentations
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/progress_report/main.pdf">Progress Report</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/design_document/main.pdf">Design Document</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/tech_review/main.pdf">Technology Review</a></h4>
