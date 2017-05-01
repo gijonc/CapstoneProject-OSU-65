@@ -11,7 +11,7 @@ Rockwell Collins
 ## Group Members
   * Jiongcheng Luo
   * Drew Hamm
-  * Krisna Iwrana
+  * Krisna Irawan
 
 ## Usage
  ### Hardware
