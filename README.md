@@ -8,7 +8,7 @@ There is a need for aviation head worn systems to be accurately aligned to the a
 Rockwell Collins
 
 
-## Group Members
+## Authors
   * Jiongcheng Luo
   * Drew Hamm
   * Krisna Irawan
