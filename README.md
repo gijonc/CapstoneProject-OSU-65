@@ -14,7 +14,10 @@ Rockwell Collins
   * Krisna Irawan
 
 ## Usage
+The usage of this project requires specific hardware components and software environment.
+
  ### Hardware
+ * [*MPU-9250 Breakout*](https://www.sparkfun.com/products/13762)
  
 
  ### Software Environment
@@ -26,7 +29,9 @@ Rockwell Collins
  ### Running Instruction
 
 
-## Documentation
+
+
+### Project Documentations
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/progress_report/main.pdf">Progress Report</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/design_document/main.pdf">Design Document</a></h4>
 <h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/tech_review/main.pdf">Technology Review</a></h4>
