@@ -14,21 +14,22 @@ Rockwell Collins
   * Krisna Irawan
 
 ## Usage
-The usage of this project requires specific hardware components and software environment.
+The usage/demonstration of this project requires specific hardware components and software environment. As long as 
 
  ### Hardware
- * [*MPU-9250 Breakout*](https://www.sparkfun.com/products/13762)
- 
+ * [MPU-9250 Breakout](https://www.sparkfun.com/products/13762)
+ * [Metro Mini 328](https://www.adafruit.com/product/2590)
+ * [I2C Protocol Guide](http://www.byteparadigm.com/applications/introduction-to-i2c-and-spi-protocols/)
 
  ### Software Environment
- * python 2.7.9
- * vpython
- * pyserial
- * Arduino IDE
+ * [Python 2.7.9](https://www.python.org/downloads/release/python-279/)
+ * [Arduino IDE](https://www.arduino.cc/en/Main/Software)
  
- ### Running Instruction
+ ### Other Libraries:
+ * [vpython](https://github.com/pyserial/pyserial)
+ * [pyserial](https://github.com/pyserial/pyserial)
 
-
+ 
 
 
 ### Project Documentations
