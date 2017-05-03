@@ -1,7 +1,9 @@
-# OSU CS Senior Software Engineering Project - Group #65
+[![Python Badge](https://img.shields.io/badge/python-2-blue.svg)](https://www.python.org/downloads/)
 
-## Project Detail
-### Head-up Display Auto-alignment System
+
+# Head-up Display Auto-alignment System
+
+## Description
 There is a need for aviation head worn systems to be accurately aligned to the aircraft when used in flight environments. Rockwell Collins would like to create a demonstration system for an auto-aligning head worn display using cutting edge micro-electronics and real-time algorithms.
 
 ## Project Sponsor
