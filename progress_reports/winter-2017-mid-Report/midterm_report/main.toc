@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {I}Signatures}{1}{section.1}
+\contentsline {section}{\numberline {II}Jiongcheng Luo (Roger)}{3}{section.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Purpose}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Current Stage}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Remaining work}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}Problems and Solutions}{3}{subsection.2.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-E}}Interesting Code}{3}{subsection.2.5}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-F}}Experimental Design Description}{4}{subsection.2.6}
+\contentsline {section}{\numberline {III}Krisna Irawan}{5}{section.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Purpose}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Current Stage}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Remaining Work}{6}{subsection.3.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Problems and Solutions}{6}{subsection.3.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-E}}Interesting Code}{7}{subsection.3.5}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-F}}First User Study}{8}{subsection.3.6}
+\contentsline {section}{\numberline {IV}Drew Hamm}{9}{section.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Purpose}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Current Stage}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Remaining work}{10}{subsection.4.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Problems and Solutions}{10}{subsection.4.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-E}}Experimental Design Description}{10}{subsection.4.5}

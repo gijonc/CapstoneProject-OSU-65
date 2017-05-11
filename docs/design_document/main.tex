@@ -1,0 +1,112 @@
+\documentclass[letterpaper,10pt,onecolumn]{IEEEtran}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{breakcites}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[subfigure]{tocloft} 
+\usepackage{subfigure} 
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{changepage}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%% The following metadata will show up in the PDF properties
+\def\title{Computer Science Senior Software Engineering Project (CS462)}
+\def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+\def\doc{Design Document}
+\def\version{2.0}
+\def\term{Winter 2017}
+\def\project{Head-Up Display Alignment System}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  linkcolor  = black,
+  pdfauthor = {\name},
+  pdfkeywords = {capstone design, \doc},
+  pdftitle = {\doc},
+  pdfsubject = {\doc},
+  pdfpagemode = UseNone
+}
+
+
+% define figure directory path 
+\graphicspath {{figures/}}
+\begin{document}
+
+\begin{titlepage}
+\centering
+	\begin{figure}
+	      	\includegraphics[scale=0.25]{osu_logo}
+	\end{figure}
+	{\Large\itshape \title\par}
+	{\Large\itshape \term\par}
+	\vspace{1cm}
+	\scshape{
+		{\Huge \project\par}
+		\vspace{1cm}
+		{\Huge\bfseries\doc\par}
+		{\large Version: \version\par}
+	}
+	\vspace{1cm}
+	{\large\itshape\bfseries Group 65:\par}
+	{\large \name\par}
+	\vspace{1cm}
+	{\large\itshape\bfseries Sponsor:\par}
+	{\large Rockwell Collins, Inc.\par}
+	\vspace{2cm}
+	{\large \today\par}
+	\vspace{4cm}
+
+	% ============= Abstract =================
+	\begin{abstract}
+		A Head-up Display (HUD) Alignment system is developed as a proof of concept aims to explore a potential technological innovation for the HUD system that presents critical flight information to pilots. The primary objective of this project is to reduce the cost and time required to precisely align flight information to the HUD by introducing an additional sensor component to the system to make the alignment process more dynamic. This document is intended for use by Rockwell Collins and their HUD system development team. This document provides and explains an overall system framework, design viewpoints and specific design description for each viewpoint within the system.
+	\end{abstract}
+	\vfill
+
+\end{titlepage}
+\tableofcontents
+
+\newpage
+\section{Signatures}
+\noindent\begin{tabular}{ll}
+\\[1cm]
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Client & Date\\[8ex]% adds space between the two sets of signatures
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Author 1 & Date\\[8ex]% adds space between the two sets of signatures
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Author 2 & Date\\[8ex]% adds space between the two sets of signatures
+\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
+Author 3 & Date\\[8ex]% adds space between the two sets of signatures
+\end{tabular}
+
+\newpage
+\input{introduction}
+
+\input{definition}
+
+\input{content}
+
+\newpage
+\nocite{*}
+\bibliography{IEEEabrv,References}
+\bibliographystyle{IEEEtran}
+
+\end{document}

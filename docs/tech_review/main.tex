@@ -1,0 +1,135 @@
+\documentclass[letterpaper,10pt,onecolumn]{IEEEtran}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[subfigure]{tocloft} 
+\usepackage{subfigure} 
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{changepage}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%% The following metadata will show up in the PDF properties
+\def\title{Computer Science Senior Software Engineering Project (CS462)}
+\def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+\def\doc{Technology Review}
+\def\version{2.0}
+\def\term{Winter 2017}
+\def\project{Head-Up Display Alignment System}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  linkcolor  = black,
+  pdfauthor = {\name},
+  pdfkeywords = {capstone design, \doc},
+  pdftitle = {\doc},
+  pdfsubject = {\doc},
+  pdfpagemode = UseNone
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+	\begin{figure}
+	      	\includegraphics[scale=0.25]{osu_logo}
+	\end{figure}
+	{\Large\itshape \title\par}
+	{\Large\itshape \term\par}
+	\vspace{1cm}
+	\scshape{
+		{\Huge \project\par}
+		\vspace{1cm}
+		{\Huge\bfseries\doc\par}
+		{\large Version: \version\par}
+	}
+	\vspace{1cm}
+	{\large\itshape\bfseries Group 65:\par}
+	{\large \name\par}
+	\vspace{1cm}
+	{\large\itshape\bfseries Sponsor:\par}
+	{\large Rockwell Collins, Inc.\par}
+	\vspace{2cm}
+	{\large \today\par}
+	\vspace{4cm}
+
+
+	% ============= Abstract =================
+	\begin{abstract}
+		This project is a proof concept to explore a potential technological innovation for Head-Up Display (HUD) system that present critical flight information to pilots.
+		The primary objective of this project is to reduce the cost and time required to precisely align flight information to the HUD by introducing additional sensor to the system to make the alignment process more dynamic.
+		To achieve this goal, there are eight different main technologies that will be critical for the development of the project. This document will compare three alternative options for each main technologies.
+		This document will also include the option that we choose for each main technologies to develop this project. 
+
+	\end{abstract}
+\end{titlepage}
+\tableofcontents
+
+\newpage
+% ============= Intro =================
+\section{Introduction}
+There are eight different main technologies that will be used or involved in this project.
+These technologies contain using of both software and hardware.
+For instance, for hardware, we will compare and discuss about some possible hardware options for building the demonstration system; for software, we will compare and discuss different algorithms or approaches for resolving the problem.
+Each of us takes an authorship (responsibility) for three technologies:\\
+
+\textit{\textbf{Jiongcheng (Roger):}}
+\begin{itemize}
+	\item Hardware selection of Microcontroller
+	\item Hardware selection of Represented MEMS IMU
+	\item Hardware selection of Communication Protocol Type
+\end{itemize}
+
+\textit{\textbf{Krisna:}}
+\begin{itemize}
+	\item User Interface Toolkit
+	\item Programming Language
+	\item Statistical Analysis Method
+\end{itemize}
+
+\textit{\textbf{Drew:}}
+\begin{itemize}
+	\item IRU Data Representation
+	\item Filter Technique\\\\
+\end{itemize}
+
+
+
+% ============= content is put in individule file =================
+\section{Technologies}
+	\input{roger}
+	\input{krisna}
+	\input{Drew}
+
+% ============= Conclusion =================
+\section{Conclusion}
+Throughout this technology review we covered each of the eight different technologies that were deemed critical to our project.
+Each technology was provide three potential options to choose between for inclusion in our proposed solution.
+Before making any decisions, we performed research to effectively compare the options against each other.
+As a result we have made the appropriate implementation decisions to move forward with in the development of our solution.
+
+
+\newpage
+\nocite{*}
+\bibliography{IEEEabrv,References}
+\bibliographystyle{IEEEtran}
+
+
+\end{document}

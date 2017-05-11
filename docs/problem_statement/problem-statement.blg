@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: problem-statement.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: IEEEabrv.bib
+Database file #2: References.bib
+-- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty author in mems
+Warning--empty journal in mems
+Warning--empty year in mems
+** IEEEtran BST control entry "IEEEexample:BSTcontrol" detected.
+
+Done.
+You've used 4 entries,
+            4024 wiz_defined-function locations,
+            1195 strings with 14885 characters,
+and the built_in function-call counts, 1379 in all, are:
+= -- 98
+> -- 22
+< -- 3
++ -- 12
+- -- 6
+* -- 76
+:= -- 269
+add.period$ -- 6
+call.type$ -- 4
+change.case$ -- 8
+chr.to.int$ -- 15
+cite$ -- 7
+duplicate$ -- 112
+empty$ -- 115
+format.name$ -- 2
+if$ -- 265
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 19
+newline$ -- 39
+num.names$ -- 2
+pop$ -- 63
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 4
+skip$ -- 89
+stack$ -- 0
+substring$ -- 6
+swap$ -- 53
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 6
+type$ -- 4
+warning$ -- 3
+while$ -- 7
+width$ -- 4
+write$ -- 54
+(There were 3 warnings)

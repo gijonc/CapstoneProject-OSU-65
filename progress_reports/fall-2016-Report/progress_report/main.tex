@@ -1,0 +1,223 @@
+\documentclass[letterpaper,10pt,onecolumn]{IEEEtran}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[subfigure]{tocloft} 
+\usepackage{subfigure} 
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{changepage}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%% The following metadata will show up in the PDF properties
+\def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+\def\doc{Progress Report}
+
+% code color highlight setup
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  linkcolor  = black,
+  pdfauthor = {\name},
+  pdftitle = {\doc},
+  pdfsubject = {\doc},
+  pdfpagemode = UseNone
+}
+
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Oregon State University \par}
+	\vspace{2cm}
+	{\Large\itshape Computer Science Senior Software Engineering Project (CS461)\par}
+	{\Large\itshape Fall 2016\par}
+	\vspace{1cm}
+	{\huge\bfseries Head-Up Display Alignment System\par}
+	\vspace{5mm}
+	{\huge\bfseries \doc\par}
+	\vspace{2cm}
+	{\large\itshape Authors:\par}
+	{\large \name\par}
+	\vspace{5cm}
+
+
+	% ============= Abstract =================
+	\begin{abstract}
+	A Head-up Display (HUD), is a transparent display that presents all necessary data that pilots need in their flight environment. This project is a proof concept to explore a potential technological innovation for  HUD system that present critical flight information to pilots. The primary objective of this project is to reduce the cost and time required to precisely align flight information to the HUD by introducing additional sensor to the system to make the alignment process more dynamic. The product being developed is a demonstration system that looks to include a MEMS IRU mounted onto the HUD and a new alignment algorithm that utilizes this additional sensor to determine accurate HUD alignment. This document will cover the progress that we made since the beginning of the term. In this document we include the project goal, purpose, where we are currently, some codes that we have been working on, and the retrospective of the past ten weeks. 
+	\end{abstract}
+	\vfill
+	{\normalsize \today\par}
+\end{titlepage}
+
+
+\section{Goals and Purpose}
+We are working with Rockwell Collins through a proof of concept that explores a potential technological innovation for their Head-Up Display (HUD) systems that present critical flight information to pilots. Specifically, our focus is on the installation of the HUD system in regards to HUD alignment. The HUD system needs to be precisely aligned with the aircraft's sensors in order to meet the desired standards when presenting flight information to pilots. The current alignment process is costly, time consuming and requires specialized equipment and epoxy during HUD installation. 
+
+Our primary goal is to build a demonstration system that explores the idea of mounting an additional sensor to the HUD. We hope to show that the initial alignment offset can be calculated by taking the output of the HUD sensor and comparing it to the known reference of the aircraft sensor. With a successful demonstration system we will be able to show an alternative method for HUD installation. This alternative method has the expectations of costing less, requiring less time as well as alleviating the need for specialized equipment and epoxy.
+
+Our secondary goal is to include in our demonstration system the ability to find the dynamic alignment offset as it relates to airframe droop. Airframe droop is a real problem in which the HUD becomes shifted from its precisely aligned position during flight. By including a sensor mounted to the HUD, we hope to find the alignment offset dynamically. By finding the dynamical alignment offset, Rockwell Collins could improve the accuracy of the information being displayed during flight.
+
+\section{Current Stage}
+At this moment, we are on the stage of hardware setup and preparing for implementation, which we have been spending time on analyzing the problem, clarifying necessary requirement for the project, sorting out the technologies we are applying the project and the planning for design details. Hence, we have moved on to the current stage that we will first acquire all necessary hardware for the setup and get familiar with all specification of the real hardware devices such as the Microcontrollers.
+
+\section{Problems and Solutions}
+Early in the term we failed to meet the expectations of our clients which led to a communication breakdown. Our clients viewed us from our first meeting as being underprepared and lacking enthusiasm. The problem was compounded after sending several poorly written emails. Some of these early emails contained poor grammar, and spelling. There were even cases where we spelled the names of clients/professor wrong. This problem of poor grammar and spelling carried over into our documents. There was also a problem with miscommunication in that we were given specific instructions that were glanced over and not put into our work. This problem came to our attention after receiving email from our professor.
+
+To solve this problem we first had a meeting with professor Kevin and Dr. Winters in which we discussed our issues and formulated solutions. We decided on making two primary changes to our workflow to resolve these issues. First, we would come together as a team to discuss the meaning behind emails received as well as discuss and peer review any emails before they were sent. For our work, we choose to create our documents in google as it provided an easy way to peer review on the fly while providing communication support via google doc messenger. After making these changes we sent an email to our client apologizing for our previous behavior.
+
+A consequence to our communication breakdown with our clients is that we had to put additional time into fixing an early document. This extra time caused our first and second documents to be turned in well past the expected turn in dates. Not only did we end up putting in additional work for the first assignment, the work we had to do was pushed into a later timeframe. This later timeframe came into conflict with other assignments that were due at that time.
+
+To solve this problem we first had to prevent poor grades that would be received for late assignments. We had to keep an open line of communication with our professors to let them know of our difficulties and how much extra time would be needed per document. To resolve this issue we had to play catch up and put in extra work. By the end of the term we were turning in documents on time. 
+
+
+\newpage
+\section{Sample Code}
+Our demonstration system of project uses a Metro Mini 328 board as the microcontroller, which is imbedded with an Atmega328 core chip. Following is a piece of sample code in C language about implementing an Triple Axis Accelerometer as the model MMA8452Q on an Arduino UNO R3 microcontroller that uses Atmega328 core chip as well \cite{sampleCode}. Specifically, this sample code demonstrates a basic program for setting up the accelerometer for the microcontroller as well as reading data from the accelerometer.\\
+
+\begin{lstlisting}[language=c]
+#include <Wire.h>	// Arduino Wire library for I2C protocol 
+#include <SFE_MMA8452Q.h> // Includes the SFE_MMA8452Q library, this library depends on the in using IMU model
+
+MMA8452Q accel;	// creating an instance for the IMU class
+
+void setup(){	// necessary set up function for Arduino program 
+	Serial.begin(9600);	
+	accel.init();
+	/* 
+	"accel.init()" initializes the scale setting for the accelerometer, MMA8452Q supports SCALE_2G, SCALE_4G and SCALE_8G, they represent the scale of +/-2g, 4g, and 8g respectively, so for instance, using 2g scale will be a function like "accel.init(SCALE_2G)"
+	*/
+}
+
+void loop{	// a Loop function for continuously updating data from the accelerometer  
+	if (accel.available()){
+	    accel.read();	
+
+		// The function "accel.read()"" will update two sets of variables: 
+		// 1. (int) x,y,z will store signed 12-bit values read from the accelerometer
+		// 2. (float) cx,cy,cz 
+
+
+		/* 
+		By calling the "accel.read" function, variables x,y,z,cx,cy,cz in "accel" class have been updated, the following code allows the program to print out all data continuously on the Arduino Serial monitor, and these variables would be the data to be processed by the aligned algorithm in our system. 
+		*/
+
+		Serial.print(accel.x, 3);
+		Serial.print(accel.y, 3);
+		Serial.print(accel.z, 3);
+
+		Serial.print(accel.cx, 3);
+		Serial.print(accel.cy, 3);
+		Serial.print(accel.cz, 3);
+	}
+}
+
+\end{lstlisting}
+
+
+\newpage
+\section{Retrospective of the past 10 weeks}
+The first week of the class was dedicated for projects presentation. Then, in the second week of the class, we give our project preferences for the year. Our teacher assign us to our project and group at the beginning of week 3. The work as a group start at week 3. Thus, this section will cover the retrospective of week 3 to week 7.
+
+\begin{center}
+\begin{tabular}{|c|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|} 
+\hline
+	\centering{\textbf{Week}} & \centering{\textbf{Postive}} & \centering{\textbf{Deltas}} & \centering{\textbf{Action}} \tabularnewline
+\hline
+	3 &
+	We had the first encounter with our clients this week.We had first touch with the project detail and we had a greater understanding of this project. &
+	We had to start working on the problem statement. &
+	We had to do more research on quaternion, sensors, and head-up display alignment system. \\
+\hline
+	4 &
+	We got some tips from our teacher on resolving the communication breakdown with our clients. &
+	We had a communication breakdown with our clients. &
+	We had to be cautious and mindful when sending material to our clients, make sure it is proofread and looks good. \\
+\hline
+	5 &
+	We had the second meeting with our clients. This helped us to get started with our requirement documents. &
+	We had to work on the requirement document. &
+	We had to think deeply about the requirement for this project and do more research on the hardware that we might use for this project. \\
+\hline
+	6 &
+	We had our requirement document signed by our clients. Our clients were really satisfied with our requirement document. &
+	We had to work on the technical review document. &
+	We had to do research on nine main technologies that critical to implement this project. \\
+\hline
+	7 &
+	We finished our technical review document on Wednesday. &
+	We had to start thinking about the design document. &
+	We had to do research on the technologies that was not covered in our technical review document. \\
+\hline
+	8 &
+	This is a short week because of the thanksgiving break. &
+	We had to start working on the design document. &
+	We had to work on the design document during break to keep on track with the deadline of the document. \\
+\hline
+	9 &
+	We had a great foundation to work on the design document. We got a better idea about the progress report. &
+	We had to finish the design document. &
+	We had to get together as a group and tackle the document together. \\
+\hline
+	10 &
+	We submitted our design document. &
+	We had to work on the progress report document and presentation video. &
+	We had to think about what we did in the last 10 weeks. We had to learn how to do screen capture presentation. \\
+\hline
+
+\end{tabular}
+\end{center}
+
+\section{Overall Retrospective}
+\hfill
+\begin{center}
+\begin{tabular}{|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|} 
+\hline
+	\centering{\textbf{Postive}} & \centering{\textbf{Deltas}} & \centering{\textbf{Action}} \tabularnewline
+	\hline
+	We have a better understanding of our teammates and our clients working style and schedule. There will be a learning curve when working on this project, but it is rewarding. &
+	As we will go to the implementation process on the winter term, we had to think more deeply about our implementation details during winter break. We need to have a better working schedule for this class. The success of the team and our project is our main goal. &
+	We have to do another run and research for the design documents during winter break.We have to recharge ourselves and fully committed to this project. \\
+\hline	
+\end{tabular}
+\end{center}
+
+\newpage
+\nocite{*}
+\bibliography{IEEEabrv,References}
+\bibliographystyle{IEEEtran}
+
+
+\end{document}
