@@ -34,13 +34,3 @@ Graphical UI (for demonstration purpose) was written in [Python](https://www.pyt
 * Instaill Python 2.7.9, VPython and pySerial
 * Compile [gui.py](https://github.com/gijoncheng/CapstoneProject-OSU-65/tree/master/src/3D_sim_gui) in command ``python gui.py`` or use Python IDLE 
 
- 
- 
- 
-
-## Project Documentations
-<h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/progress_report/main.pdf">Progress Report</a></h4>
-<h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/design_document/main.pdf">Design Document</a></h4>
-<h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/tech_review/main.pdf">Technology Review</a></h4>
-<h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/requirement_document/main.pdf">Requirement Document</a></h4>
-<h4><a href="https://github.com/gijoncheng/CapstoneProject-OSU-65/blob/master/problem_statement/problem-statement.pdf">Problem Statement</a></h4>
