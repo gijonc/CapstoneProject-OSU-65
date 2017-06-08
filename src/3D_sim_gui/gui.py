@@ -14,9 +14,9 @@ import sys
 import time 
 
 
-PORT = '/dev/tty.SLAB_USBtoUART'	# Roger
-#PORT = 'COM4'						# Krisna
-# PORT = 'COM3'						# Drew
+PORT = '/dev/tty.SLAB_USBtoUART'	# MAC OS
+#PORT = 'COM4'						# WINDOWS
+
 
 
 BAUD_RATE = 38400
