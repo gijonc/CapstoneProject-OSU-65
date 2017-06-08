@@ -205,7 +205,8 @@ bool MPU9250::initMPU9250_Magnetometer(){
   delay(delay_s);
 
   // 16-bit continuous measurement mode via AK8963's control 1
-  writeByte(i2c_address, I2C_SLV0_DO, (CNTL1_16BIT_OUTPUT | CNTL1_CONTINUOUS_MEASUREMENT_MODE_2));
+  writeByte(i2c_address, I2C_SLV0_DO, Mscale << 4 | Mmode);
+  //writeByte(i2c_address, I2C_SLV0_DO, (CNTL1_16BIT_OUTPUT | CNTL1_CONTINUOUS_MEASUREMENT_MODE_2));
   delay(delay_l);
 
   // Setup for read
@@ -267,7 +268,7 @@ bool MPU9250::initMPU9250_Gyroscope(){
   // get current GYRO_CONFIG register value
   uint8_t c = readByte(i2c_address, GYRO_CONFIG);
   // c = c & ~0xE0; // Clear self-test bits [7:5]
-  c = c & ~0x02; // Clear Fchoice bits [1:0]
+  c = c & ~0x03; // Clear Fchoice bits [1:0]
   c = c & ~0x18; // Clear AFS bits [4:3]
   c = c | getGscale() << 3; // Set full scale range for the gyro
   // Set Fchoice for the gyro to 11 by writing its inverse to bits 1:0 of
@@ -289,10 +290,10 @@ bool MPU9250::calibrateMPU9250_Magnetometer(){
   // Make sure resolution has been calculated
   getMres();
 
-  if(SERIAL_DEBUG){
-    Serial.println(F("Mag Calibration: Wave device in a figure 8 until done!"));
-    Serial.println(F("  4 seconds to get ready followed by 15 seconds of sampling)"));
-  }
+  // if(SERIAL_DEBUG){
+  //   Serial.println(F("Mag Calibration: Wave device in a figure 8 until done!"));
+  //   Serial.println(F("  4 seconds to get ready followed by 15 seconds of sampling)"));
+  // }
   delay(4000);
 
   // Determine the number of samples to take
@@ -563,7 +564,251 @@ bool MPU9250::calibrateMPU9250_Accelerometer(){
     }
   }
 }
+/*
+bool MPU9250::calibrateMPU9250_Gyroscope(){
+  uint8_t data[6]; // data array to hold gyro x, y, z, data
+  uint16_t ii, packet_count, fifo_count;
+  int32_t gyro_bias[3]  = {0, 0, 0};
+  int16_t gyro_max[3]  = {0x8000, 0x8000, 0x8000},
+          gyro_min[3]  = {0x7FFF, 0x7FFF, 0x7FFF};
 
+  if(SERIAL_DEBUG){
+    Serial.println("calibrateMPU9250_Gyroscope");
+  }
+
+  // Make sure resolution has been calculated
+  getGres();
+
+  // reset device
+  // Write a one to bit 7 reset bit; toggle reset device
+  writeByte(i2c_address, PWR_MGMT_1, READ_FLAG);
+  delay(100);
+
+  // get stable time source; Auto select clock source to be PLL gyroscope
+  // reference if ready else use the internal oscillator, bits 2:0 = 001
+  writeByte(i2c_address, PWR_MGMT_1, 0x01);
+  writeByte(i2c_address, PWR_MGMT_2, 0x00);
+  delay(200);
+
+  // Configure device for bias calculation
+  // Disable all interrupts
+  writeByte(i2c_address, INT_ENABLE, 0x00);
+  // Disable FIFO
+  writeByte(i2c_address, FIFO_EN, 0x00);
+  // Turn on internal clock source
+  writeByte(i2c_address, PWR_MGMT_1, 0x00);
+  // Disable I2C master
+  writeByte(i2c_address, I2C_MST_CTRL, 0x00);
+  // Disable FIFO and I2C master modes
+  writeByte(i2c_address, USER_CTRL, 0x00);
+  // Reset FIFO and DMP
+  writeByte(i2c_address, USER_CTRL, 0x0C);
+  delay(15);
+
+  // Configure MPU6050 gyro and accelerometer for bias calculation
+  // Set low-pass filter to 188 Hz
+  writeByte(i2c_address, CONFIG, 0x01);
+  // Set sample rate to 1 kHz
+  writeByte(i2c_address, SMPLRT_DIV, 0x00);
+  // Set gyro full-scale to 250 degrees per second, maximum sensitivity
+  writeByte(i2c_address, GYRO_CONFIG, 0x00);
+
+  uint16_t  gyrosensitivity  = 131;   // = 131 LSB/degrees/sec
+
+  // Configure FIFO to capture gyro data for bias calculation
+  writeByte(i2c_address, USER_CTRL, 0x40);  // Enable FIFO
+  // Enable gyro and accelerometer sensors for FIFO  (max size 512 bytes in
+  // MPU-9150)
+
+  int calibration_is_imcomplete = 1;
+  int axis = X_AXIS;
+  float x_confidence = 0.0;
+  float y_confidence = 0.0;
+  float z_confidence = 0.0;
+  float x_bias = 0.0;
+  float y_bias = 0.0;
+  float z_bias = 0.0;
+
+  // Enable gyro sensor for FIFO
+  writeByte(i2c_address, FIFO_EN, 0x70);
+  while(calibration_is_imcomplete){
+    delay(80);  // accumulate 80 samples in 80 milliseconds = 480 bytes
+    if(EXTRA_GYRO_INFO){
+      Serial.print("Max sample reached for ");
+      switch(axis){
+        case X_AXIS:
+          Serial.println("Gyroscope X.");
+          break;
+
+        case Y_AXIS:
+          Serial.println("Gyroscope Y.");
+          break;
+
+        case Z_AXIS:
+          Serial.println("Gyroscope Z.");
+          break;
+      }
+    }
+
+    // Read FIFO sample count
+    readBytes(i2c_address, FIFO_COUNTH, 2, &data[0]);
+    fifo_count = ((uint16_t)data[0] << 8) | data[1];
+
+    // How many sets of full gyro
+    packet_count = fifo_count/6;
+
+    if(packet_count > maxSample){
+      packet_count = maxSample;
+    }
+
+    if(EXTRA_GYRO_INFO){
+      Serial.print("packet_count: ");
+      Serial.println(packet_count);
+    }
+
+    // Read data
+    for (int i = 0; i < packet_count; i++)
+    {
+
+      readBytes(i2c_address, FIFO_R_W, 6, &data[0]);
+
+      // Form signed 16-bit integer for each sample in FIFO
+      switch(axis){
+        case X_AXIS:
+          samples[i] = (float) (((int16_t)data[0] << 8) | data[1]  );
+          break;
+
+        case Y_AXIS:
+          samples[i] = (float) (((int16_t)data[2] << 8) | data[3]  );
+          break;
+
+        case Z_AXIS:
+          samples[i] = (float) (((int16_t)data[4] << 8) | data[5]  );
+          break;
+      }
+    }
+
+    //Get mean
+    float mean = getMean(samples, packet_count);
+    if(EXTRA_GYRO_INFO){
+      Serial.print("mean: ");
+      Serial.println(mean);
+    }
+
+    //Get standard deviation
+    float standard_deviation = getStandardDeviation(samples, mean, packet_count);
+    if(EXTRA_GYRO_INFO){
+      Serial.print("standard_deviation: ");
+      Serial.println(standard_deviation);
+    }
+
+    //Get confidence interval
+    float confidence_level = getConfidenceInterval(standard_deviation, packet_count, 1.960);
+    if(EXTRA_GYRO_INFO){
+      Serial.print("confidence_level: ");
+      Serial.println(confidence_level);
+    }
+    //Check confidence interval before continuing
+    //Output results when passing
+    if(confidence_level < 5 && confidence_level > 0.0000001){
+      switch(axis){
+        case X_AXIS:
+          x_confidence = confidence_level;
+          x_bias = mean;
+          axis = Y_AXIS;
+          if(EXTRA_GYRO_INFO){
+            Serial.print("Gyro X bias: ");
+          }
+          break;
+        case Y_AXIS:
+          y_confidence = confidence_level;
+          y_bias = mean;
+          axis = Z_AXIS;
+          if(EXTRA_GYRO_INFO){
+            Serial.print("Gyro Y bias: ");
+          }
+          break;
+        case Z_AXIS:
+          z_confidence = confidence_level;
+          z_bias = mean;
+          calibration_is_imcomplete = false;
+          if(EXTRA_GYRO_INFO){
+            Serial.print("Gyro Z bias: ");
+          }
+          break;
+      }
+
+      //Output results
+      if(EXTRA_GYRO_INFO){
+        Serial.print(mean, 5);
+        Serial.print(" +- ");
+        Serial.println(confidence_level, 5);
+      }
+    }else{
+      if(EXTRA_GYRO_INFO){
+        Serial.println("Confidence level insufficient");
+      }
+    }
+  }
+
+  // At end of sample accumulation, turn off FIFO sensor read
+  // Disable gyro sensor for FIFO
+  writeByte(i2c_address, FIFO_EN, 0x00);
+
+
+
+  // Sum individual signed 16-bit biases to get accumulated signed 32-bit biases
+  gyro_bias[0]  = (int32_t) x_bias;
+  gyro_bias[1]  = (int32_t) y_bias;
+  gyro_bias[2]  = (int32_t) z_bias;
+  if(EXTRA_GYRO_INFO){
+      for(int i = 0; i < 3; i++){
+        Serial.print("gyroBias[");
+        Serial.print(i);
+        Serial.print("] = ");
+        Serial.println((float) gyro_bias[i]/(float) gyrosensitivity, 5);
+      }
+    }
+  // Construct the gyro biases for push to the hardware gyro bias registers,
+  // which are reset to zero upon device startup.
+  // Divide by 4 to get 32.9 LSB per deg/s to conform to expected bias input
+  // format.
+
+  // Biases are additive, so change sign on calculated average gyro biases
+  //???
+  data[0] = (-gyro_bias[0]/4  >> 8) & 0xFF;
+  // Biases are additive, so change sign on calculated average gyro biases
+  data[1] = (-gyro_bias[0]/4)       & 0xFF;
+  data[2] = (-gyro_bias[1]/4  >> 8) & 0xFF;
+  data[3] = (-gyro_bias[1]/4)       & 0xFF;
+  data[4] = (-gyro_bias[2]/4  >> 8) & 0xFF;
+  data[5] = (-gyro_bias[2]/4)       & 0xFF;
+
+  // Push gyro biases to hardware registers
+  writeByte(i2c_address, XG_OFFSET_H, data[0]);
+  writeByte(i2c_address, XG_OFFSET_L, data[1]);
+  writeByte(i2c_address, YG_OFFSET_H, data[2]);
+  writeByte(i2c_address, YG_OFFSET_L, data[3]);
+  writeByte(i2c_address, ZG_OFFSET_H, data[4]);
+  writeByte(i2c_address, ZG_OFFSET_L, data[5]);
+
+  // Output scaled gyro biases for display in the main program
+  gyroBias[0] = (float) gyro_bias[0]/(float) gyrosensitivity;
+  gyroBias[1] = (float) gyro_bias[1]/(float) gyrosensitivity;
+  gyroBias[2] = (float) gyro_bias[2]/(float) gyrosensitivity;
+  if(EXTRA_GYRO_INFO){
+    for(int i = 0; i < 3; i++){
+      Serial.print("gyroBias[");
+      Serial.print(i);
+      Serial.print("] = ");
+      Serial.println(gyroBias[i], 5);
+    }
+  }
+
+}
+
+
+*/
 bool MPU9250::calibrateMPU9250_Gyroscope(){
   uint8_t data[6]; // data array to hold gyro x, y, z, data
   uint16_t ii, packet_count, fifo_count;
@@ -797,6 +1042,7 @@ bool MPU9250::read_Magnetometer()
 {
   // x/y/z gyro register data, ST2 register stored here, must read ST2 at end
   // of data acquisition
+
   uint8_t rawData[7];
 
   // Read the six raw data and ST2 registers sequentially into data array
@@ -807,8 +1053,8 @@ bool MPU9250::read_Magnetometer()
   if (!(c & 0x08))
   {
     // Turn the MSB and LSB into a signed 16-bit value
+    // Might want to filter out erroneous values
     magCount[0] = ((int16_t)rawData[1] << 8) | rawData[0];
-    // Data stored as little Endian
     magCount[1] = ((int16_t)rawData[3] << 8) | rawData[2];
     magCount[2] = ((int16_t)rawData[5] << 8) | rawData[4];
   }
@@ -847,7 +1093,7 @@ bool MPU9250::read_Gyroscope(){
 
 
 void MPU9250::updateQuaternion(){
-  q_m.update(ax, ay, az, gx * DEG_TO_RAD, gy * DEG_TO_RAD, gz * DEG_TO_RAD, my, mx, mz);
+  q_m.update(ax, ay, az, gx, gy, gz, mx, my, mz);
 }
 
 void MPU9250::retrieve_data(){
@@ -868,9 +1114,29 @@ void MPU9250::retrieve_data(){
   gz = (float)gyroCount[2] * gRes;
 
   // Magnetometer
-  mx = (float)magCount[0] * mRes * factoryMagCalibration[0] - magBias[0];
-  my = (float)magCount[1] * mRes * factoryMagCalibration[1] - magBias[1];
-  mz = (float)magCount[2] * mRes * factoryMagCalibration[2] - magBias[2];
+  mx = (float)magCount[0] * mRes;// * factoryMagCalibration[0] - magBias[0];
+  my = (float)magCount[1] * mRes;// * factoryMagCalibration[1] - magBias[1];
+  mz = (float)magCount[2] * mRes;// * factoryMagCalibration[2] - magBias[2];
+  
+  /*
+  float ratio_acc = 4.0f/32767.0f;
+  float ratio_gyro = (1000.0f/32767.0f) * (PI / 180.0f);
+  float ratio_mag = 48.0f / 32767.0f;
+
+  ax = (float)accelCount[0] * ratio_acc;
+  ay = (float)accelCount[1] * ratio_acc;
+  az = (float)accelCount[2] * ratio_acc;
+
+  // Gyroscope
+  gx = ((float)gyroCount[0] - 48.4827) * ratio_gyro;
+  gy = ((float)gyroCount[1] + 76.3552) * ratio_gyro;
+  gz = ((float)gyroCount[2] + 64.3234) * ratio_gyro;
+
+  // Magnetometer
+  mx = (float)magCount[0] * ratio_mag;
+  my = (float)magCount[1] * ratio_mag;
+  mz = (float)magCount[2] * ratio_mag;
+  */
 }
 
 // Wire.h read and write protocols

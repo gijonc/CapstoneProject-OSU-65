@@ -16,8 +16,12 @@ void Quaternion_Module::update(float ax, float ay, float az, float gx, float gy,
 	deltat = ((now - lastUpdate) / 1000000.0f);
 	lastUpdate = now;
 
-  	MadgwickQuaternionUpdate(q, ax, ay, az, gx * DEG_TO_RAD, gy * DEG_TO_RAD, gz * DEG_TO_RAD, my, mx, mz, deltat);
-	//MahonyQuaternionUpdate(q, eInt, ax, ay, az, gx, gy, gz, my, mx, mz, deltat);
+
+
+	//MahonyQuaternionUpdate(q, eInt, ax, ay, az, gx*DEG_TO_RAD, gy*DEG_TO_RAD, gz*DEG_TO_RAD, my, mx, mz, deltat);
+
+	//MadgwickQuaternionUpdate(q, ax, ay, az, gx*DEG_TO_RAD, gy*DEG_TO_RAD, gz*DEG_TO_RAD, my, mx, mz, deltat);
+	MadgwickQuaternionUpdate_v2(q, ax, ay, az, gx*DEG_TO_RAD, gy*DEG_TO_RAD, gz*DEG_TO_RAD, deltat);
 }
 
 Quaternion_Module::Quaternion_Module(){
