@@ -1,0 +1,128 @@
+\documentclass[letterpaper,10pt,onecolumn]{IEEEtran}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage[final]{pdfpages}
+\usepackage{breakcites}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{balance}
+\usepackage[subfigure]{tocloft} 
+\usepackage{subfigure} 
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{changepage}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+%% The following metadata will show up in the PDF properties
+\def\title{Computer Science Senior Software Engineering Project (CS463)}
+\def\name{Krisna Irawan\\ Jiongcheng Luo\\ Drew Hamm}
+\def\doc{Final Report}
+\def\term{Spring 2017}
+\def\project{Head-Up Display Alignment System}
+
+% code color highlight setup
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{black!3},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+  language=C++
+}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  linkcolor  = black,
+  pdfauthor = {\name},
+  pdfkeywords = {capstone, \doc},
+  pdftitle = {\doc},
+  pdfsubject = {\doc},
+  pdfpagemode = UseNone
+}
+
+
+% define figure directory path 
+\graphicspath {{images/}}
+\begin{document}
+
+\begin{titlepage}
+\centering
+	\begin{figure}
+      	\includegraphics[scale=0.25]{osu_logo}
+	\end{figure}
+	{\Large\itshape \title\par}
+	\vspace{1.5cm}
+	\scshape{
+		{\Huge \project\par}
+
+		\vspace{1.5cm}
+		{\Huge\bfseries\doc\par}
+		{\huge \term\par}
+	}
+	\vspace{2cm}
+	{\large\itshape\bfseries Group 65:\par}
+	{\large \name\par}
+	\vspace{2cm}
+	{\large\itshape\bfseries Sponsor:\par}
+	{\large Rockwell Collins, Inc.\par}
+	\vspace{2cm}
+	{\large \today\par}
+	\vspace{2cm}
+
+	% ============= Abstract =================
+	\begin{abstract}
+		This document reports the progress that we have made since the beginning of spring term of 2017. This report mainly introduces our current progress and remaining works of the project, problems that we encoutered and their solutions. This report will also cover the highlighted codes of the software as well as a prelimary result of this project.
+	\end{abstract}
+	\vfill
+
+\end{titlepage}
+\tableofcontents
+
+\newpage
+
+\input{tex/introduction}
+
+\input{tex/ori_req_doc}
+
+\input{tex/req_doc_change}
+
+\input{tex/ori_design_doc}
+
+\input{tex/ori_tech_review}
+
+\input{tex/blog_fall}
+\input{tex/blog_winter}
+\input{tex/blog_spring}
+
+\input{tex/poster}
+
+\input{tex/documentation}
+
+\input{tex/learn_new_tech}
+
+\input{tex/learn_all}
+
+\input{tex/appendix}
+
+\end{document}
